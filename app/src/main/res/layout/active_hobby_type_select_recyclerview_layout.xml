@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/root_layout"
+        android:background="@drawable/shape_round_10_stroke_999999"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:paddingLeft="7.5dp"
+        android:paddingRight="7.5dp">
+
+    <ImageView
+        android:id="@+id/service_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/error_bg"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+       android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/service_name_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_13"
+            android:text="标签名称"
+            android:layout_below="@+id/service_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1.5dp"
+            />
+
+        <CheckBox
+        android:id="@+id/service_type_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:button="@null"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13"
+        android:checked="false"
+        />
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_select"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignRight="@id/root_layout"
+        android:layout_marginRight="-12dp"
+        android:background="@drawable/hobby_select"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>

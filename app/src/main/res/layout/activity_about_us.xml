@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f4f4f4"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        tools:layout="@layout/fragment_title" />
+
+    <ImageView
+        android:id="@+id/image_about_us"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/app_icon" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center" />
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_e6e6e6" />
+
+    <ListView
+        android:id="@+id/list_about_us"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/color_e6e6e6"
+        android:dividerHeight="1dp"
+        android:fastScrollEnabled="false" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_e6e6e6" />
+</LinearLayout>

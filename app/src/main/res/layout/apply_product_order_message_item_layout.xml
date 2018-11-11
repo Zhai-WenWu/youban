@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginRight="20dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_view_2">
+
+    <TextView
+        android:id="@+id/tip_text_view_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:text="申请试用商品"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_15" />
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_below="@+id/tip_text_view_2"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="2dp"
+        android:src="@color/colorAccent" />
+
+
+    <TextView
+        android:id="@+id/product_name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/image_view"
+        android:layout_toRightOf="@+id/image_view"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="圣罗兰圆管口红香港专柜做的幸福额啊说大二才是啊虽然挺好"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13" />
+
+
+    <TextView
+        android:id="@+id/product_number_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_name_view"
+        android:layout_marginTop="11dp"
+        android:layout_toRightOf="@+id/image_view"
+        android:text="限量2件"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_12" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_name_view"
+        android:layout_marginTop="11dp"
+        android:layout_toLeftOf="@+id/product_price_view_1"
+        android:text="￥"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_12"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/product_price_view_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_name_view"
+        android:layout_marginTop="11dp"
+        android:layout_toLeftOf="@+id/product_price_view_2"
+        android:text="288.00"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_12"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/product_price_view_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/product_name_view"
+        android:layout_marginTop="11dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="5dp"
+        android:text="￥0.00"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_12" />
+
+
+    <TextView
+        android:id="@+id/tip_text_view_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_view"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="10dp"
+        android:text="恭喜您申请此商品试用成功！"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_15" />
+
+
+    <TextView
+        android:id="@+id/accepted_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tip_text_view_3"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="10dp"
+        android:text="收件人：李娜  13000002345"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_15" />
+
+
+    <TextView
+        android:id="@+id/address_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accepted_text_view"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="10dp"
+        android:text="收货地址：北京市昌平区天通苑公园里88"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_15" />
+
+    <TextView
+        android:id="@+id/code_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address_text_view"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="10dp"
+        android:text="取货码为：123456"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_15"/>
+
+    <TextView
+        android:id="@+id/tip_text_view_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/code_text_view"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="2dp"
+        android:text="在3-5个工作日内，会有配送人员将商品"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_15" />
+
+    <Button
+        android:id="@+id/btn_view_1"
+        android:layout_width="65dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignTop="@+id/btn_view_2"
+        android:layout_below="@+id/tip_text_view_4"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginRight="11dp"
+        android:layout_toLeftOf="@+id/btn_view_2"
+        android:background="@drawable/shape_round_10_solid_ffee00"
+        android:text="确认收货"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_11"
+        android:visibility="visible" />
+
+
+    <Button
+        android:id="@+id/btn_view_2"
+        android:layout_width="89dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tip_text_view_4"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_round_10_solid_ffee00"
+        android:text="查看订单详情"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_11"
+        android:visibility="visible" />
+
+</RelativeLayout>

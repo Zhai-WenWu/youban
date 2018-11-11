@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_round_40_stroke_d8d8d8_solid_fafafa"
+        android:layout_marginTop="5dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:gravity="center"
+        android:text="羽毛球"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="@color/color_999999"/>
+
+    <ImageView
+        android:id="@+id/pop_view"
+        android:layout_toRightOf="@+id/text_view"
+        android:layout_marginLeft="-8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/new_type_expande_icon"/>
+
+</RelativeLayout>

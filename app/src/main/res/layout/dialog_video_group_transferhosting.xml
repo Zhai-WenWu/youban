@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_200c0c0c">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/shape_round_10_solid_ffffff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定移交主持权限？"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_15" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="67dp"
+                android:layout_height="35dp"
+                android:background="@drawable/shape_round_10_stroke_a5a5a5"
+                android:text="取消"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_15" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="67dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="36dp"
+                android:background="@drawable/shape_round_10_stroke_a5a5a5"
+                android:text="确定"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

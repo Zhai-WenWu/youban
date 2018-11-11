@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff">
+
+
+
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文案"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_14"
+        android:padding="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/linear_image_two"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/content_text"
+        android:layout_marginBottom="17dp"
+        android:paddingTop="12dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_first"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/error_bg" />
+
+        <ImageView
+            android:id="@+id/video_play_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/video_play_icon"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_image_two"
+        android:paddingTop="12dp"
+        android:visibility="gone" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image_view"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/recycler_image"
+        android:layout_margin="5dp"
+        android:src="@mipmap/error_user_icon" />
+
+    <TextView
+        android:id="@+id/nickname_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="名称"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_14"
+        android:layout_toRightOf="@+id/user_image_view"
+        android:layout_alignTop="@+id/user_image_view"
+        android:layout_alignBottom="@+id/user_image_view"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:maxWidth="150dp"/>
+
+    <TextView
+        android:id="@+id/type_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="类型"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_14"
+        android:layout_toRightOf="@+id/nickname_textView"
+        android:layout_alignTop="@+id/user_image_view"
+        android:layout_alignBottom="@+id/user_image_view"
+        android:gravity="center_vertical|right"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+
+
+
+
+
+</RelativeLayout>

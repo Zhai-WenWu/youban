@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="29dp"
+    android:background="@color/color_f4f4f4">
+
+    <TextView
+        android:id="@+id/num_view"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:text="共0条数据"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_13"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:gravity="bottom"
+        android:background="@color/color_ffffff"
+        android:layout_marginTop="5dp"/>
+
+</RelativeLayout>

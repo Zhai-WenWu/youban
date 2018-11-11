@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_ffffff"
+    >
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        tools:layout="@layout/fragment_title" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_fragment">
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <include android:layout_width="match_parent"
+                android:layout_height="150dp"
+                layout="@layout/home_ad_header_layout"
+                android:id="@+id/active_img_layout"/>
+
+            <TextView
+                android:id="@+id/active_state_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_alignLeft="@+id/active_img_layout"
+                android:layout_alignTop="@+id/active_img_layout"
+                android:textColor="@color/color_ffffff"
+                android:text="活动状态"
+                android:background="@drawable/shape_round_18_left_top_solid_99333333"
+                android:paddingLeft="6dp"
+                android:paddingTop="2.5dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="2.5dp"
+                android:textSize="@dimen/text_size_11"
+                android:layout_margin="10dp"/>
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/active_img_layout"
+                android:layout_marginTop="10dp"
+                android:id="@+id/content_layout">
+
+            <TextView
+                android:id="@+id/active_content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:text="活动简介的主题"
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="21dp"
+                android:textStyle="bold"
+                android:layout_toLeftOf="@+id/share_text_view"/>
+
+            <TextView
+                android:id="@+id/share_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="分享"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_12"
+                android:paddingTop="4dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="4dp"
+                android:background="@drawable/shape_round_10_solid_ffee00"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/active_type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_below="@+id/content_layout"
+                android:gravity="center"
+                android:text="Ta想约你一起"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_13"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_hobby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/content_layout"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/active_type_tv"
+                android:layout_marginRight="50dp"/>
+
+            <TextView
+                android:id="@+id/active_group_tip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_999999"
+                android:text="活动临时讨论群，加入群聊了解更多活动内容。\n报名自动入群，活动结束24小时后解散。"
+                android:textSize="@dimen/text_size_10"
+                android:layout_below="@+id/recycler_hobby"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"/>
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/active_group_tip_tv"
+                android:background="@color/color_f4f4f4"
+                android:paddingRight="15dp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/active_join_group_layout"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/active_group_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/color_333333"
+                    android:text="群名称"
+                    android:textSize="@dimen/text_size_14"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/active_group_join_text"
+                    android:layout_marginRight="10dp"
+                    android:gravity="left"/>
+
+
+                <TextView
+                android:id="@+id/active_group_join_text"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_below="@+id/recommend_assoication_image"
+                android:singleLine="true"
+                android:text="加入群"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_13"
+                android:background="@drawable/shape_round_10_solid_ffee00"
+                android:layout_alignRight="@+id/recommend_assoication_image"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:visibility="visible"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/active_join_group_layout"
+                android:background="@drawable/shape_round_10_solid_ffee00"
+                android:layout_marginRight="17dp"
+                android:layout_marginLeft="17dp"
+                android:id="@+id/active_create_group_layout"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/create_group_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:textColor="@color/color_333333"
+                    android:text="创建活动讨论群"
+                    android:textSize="@dimen/text_size_16"
+                    android:drawableLeft="@mipmap/active_create_group_icon"
+                    android:drawablePadding="2dp"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/active_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:text="活动时间："
+                android:textSize="@dimen/text_size_14"
+                android:layout_below="@+id/active_create_group_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@mipmap/active_time_icon"
+                android:drawablePadding="5dp"/>
+
+            <TextView
+                android:id="@+id/active_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/active_time_text"
+                android:layout_alignBottom="@+id/active_time_text"
+                android:layout_toEndOf="@+id/active_time_text"
+                android:text="2017-09-22 22:00"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/active_place_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:text="活动地点："
+                android:textSize="@dimen/text_size_14"
+                android:layout_below="@+id/active_time_text"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@mipmap/active_location_icon"
+                android:drawablePadding="5dp"/>
+
+            <TextView
+                android:id="@+id/active_place_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_666666"
+                android:text=""
+                android:textSize="@dimen/text_size_14"
+                android:layout_toRightOf="@+id/active_place_text"
+                android:layout_below="@+id/active_time_text"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/active_charge_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:text="预算："
+                android:textSize="@dimen/text_size_13"
+                android:layout_below="@+id/active_place_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@mipmap/active_charge_icon"
+                android:drawablePadding="5dp"
+                />
+
+            <TextView
+                android:id="@+id/active_charge_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_666666"
+                android:text="0元"
+                android:textSize="@dimen/text_size_13"
+                android:layout_toRightOf="@+id/active_charge_text"
+                android:layout_alignTop="@+id/active_charge_text"
+               />
+
+            <TextView
+                android:id="@+id/active_sex_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:text="参与者性别限制："
+                android:textSize="@dimen/text_size_13"
+                android:layout_below="@+id/active_charge_text"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@mipmap/active_sex_limit_icon"
+                android:drawablePadding="5dp"
+                />
+
+            <TextView
+                android:id="@+id/active_sex_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/active_sex_text"
+                android:layout_alignBottom="@+id/active_sex_text"
+                android:layout_toEndOf="@+id/active_sex_text"
+                android:text="不限性别"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/orgain_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:text="发布人只邀请了以下圈子的小伙伴，您可以加入活动群了解活动详情，也可立即加入以下圈子即可参加活动"
+                android:textSize="@dimen/text_size_14"
+                android:layout_below="@+id/active_sex_text"
+                android:layout_marginLeft="10dp"
+                android:paddingTop="20dp"
+                android:layout_marginRight="10dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/orgain_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:layout_below="@+id/orgain_text"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:nestedScrollingEnabled="false"/>
+
+
+            <TextView
+                android:id="@+id/active_user_num_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:text="已报名"
+                android:textSize="@dimen/text_size_14"
+                android:layout_below="@+id/orgain_recycler_view"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/active_user_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_666666"
+                android:text=""
+                android:textSize="@dimen/text_size_12"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/active_user_num_text"
+                android:layout_alignTop="@+id/active_user_num_text"
+                android:layout_alignBottom="@+id/active_user_num_text"
+                android:gravity="center_vertical"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:layout_below="@+id/active_user_num_text"
+                android:layout_marginTop="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:nestedScrollingEnabled="false"/>
+
+            <TextView
+                android:id="@+id/join_tv"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:textColor="@color/color_333333"
+                android:text="我要报名"
+                android:textSize="@dimen/text_size_16"
+                android:layout_marginRight="17dp"
+                android:layout_marginLeft="17dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/recycler_view"
+                android:background="@drawable/shape_round_10_solid_ffee00"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/join_tv"
+                android:paddingTop="30dp"
+                android:layout_marginRight="17dp"
+                android:layout_marginLeft="17dp"
+                android:orientation="horizontal"
+                android:id="@+id/edit_active_layout"
+                android:visibility="gone">
+
+            <TextView
+                android:id="@+id/charge_active_tv"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:textColor="@color/color_333333"
+                android:text="修改活动"
+                android:textSize="@dimen/text_size_15"
+                android:layout_toLeftOf="@+id/delete_active_tv"
+                android:background="@drawable/shape_round_10_solid_ffee00"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/delete_active_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_666666"
+                    android:text="删除活动"
+                    android:textSize="@dimen/text_size_15"
+                    android:layout_toLeftOf="@+id/delete_active_tv"
+                    android:background="@drawable/shape_round_10_stroke_999999_solid_fafafa"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/color_00000000"
+                android:layout_below="@+id/edit_active_layout"/>
+
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

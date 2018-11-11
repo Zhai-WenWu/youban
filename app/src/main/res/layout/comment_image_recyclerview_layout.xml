@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@mipmap/post_publish_add_img_icon" />
+
+    <ImageView
+        android:id="@+id/image_delect"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignRight="@+id/image_view"
+        android:src="@drawable/close_icon_grey_bg" />
+
+</RelativeLayout>
+

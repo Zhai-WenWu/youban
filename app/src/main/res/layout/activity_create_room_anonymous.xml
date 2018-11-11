@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_open_video">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="44dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_fragment"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="74dp">
+
+            <EditText
+                android:id="@+id/edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="输入房间聊天主题，吸引更多人参与"
+                android:textColor="@color/color_ffffff"
+                android:textColorHint="@color/color_999999"
+                android:textSize="@dimen/text_size_16" />
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/edit_title"
+                android:background="@color/color_b3e6e6e6" />
+
+            <TextView
+                android:id="@+id/tv_label_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_line"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="为你的聊天频道加标签（最多3个）"
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/text_size_13" />
+
+            <ImageView
+                android:id="@+id/img_tag"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_below="@+id/tv_label_title"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/tag_icon" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_label_title"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/img_tag" />
+
+            <TextView
+                android:id="@+id/tv_title_schoolmate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recycler_label"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="27dp"
+                android:text="聊天用户限制："
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/text_size_14" />
+
+            <RadioGroup
+                android:id="@+id/rg_schoolmate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title_schoolmate"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="13dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbtn_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/selector_chatroom_radiobutton"
+                    android:drawablePadding="6dp"
+                    android:text="所有人"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/text_size_14" />
+
+                <RadioButton
+                    android:id="@+id/rbtn_schoolmate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/selector_chatroom_radiobutton"
+                    android:drawablePadding="6dp"
+                    android:text="仅校友"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/text_size_14" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_title_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rg_schoolmate"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="27dp"
+                android:text="性别限制："
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/text_size_14" />
+
+            <RadioGroup
+                android:id="@+id/rg_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title_sex"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="13dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbtn_all_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/selector_chatroom_radiobutton"
+                    android:drawablePadding="6dp"
+                    android:text="不限性别"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/text_size_14" />
+
+                <RadioButton
+                    android:id="@+id/rbtn_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/selector_chatroom_radiobutton"
+                    android:drawablePadding="6dp"
+                    android:text="仅男生加入"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/text_size_14" />
+
+                <RadioButton
+                    android:id="@+id/rbtn_women"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:background="@null"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/selector_chatroom_radiobutton"
+                    android:drawablePadding="6dp"
+                    android:text="仅女生加入"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/text_size_14" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rg_sex"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:text="在匿名聊天房间，头像和昵称随机生成，在此聊天室请您注意言语措辞，感谢您的配合！"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_11" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_create"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="17.5dp"
+        android:layout_marginRight="17.5dp"
+        android:background="@drawable/shape_round_10_solid_e6e6e6"
+        android:gravity="center"
+        android:text="开启"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_16" />
+</RelativeLayout>

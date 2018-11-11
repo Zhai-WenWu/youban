@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_f4f4f4"
+   >
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        tools:layout="@layout/fragment_title" />
+
+
+    <EditText
+        android:id="@+id/location_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_fragment"
+        android:hint="请输入活动所在位置，帮助小伙伴定位"
+        android:textColorHint="@color/color_cccccc"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_14"
+        android:background="@color/color_ffffff"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginTop="10dp"
+        android:drawableRight="@mipmap/active_arrow_icon"
+        android:drawablePadding="10dp"
+        android:singleLine="true"
+        android:focusable="false"/>
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请先选择活动地点，若未找到，可选择离活动最近的位置，便于小伙们定位查找。"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_11"
+        android:id="@+id/tip_tv"
+        android:layout_below="@+id/location_tv"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="22dp"
+        android:visibility="visible"/>
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="详细地址可在下方横线上补充说明。"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_11"
+        android:id="@+id/tip2_tv"
+        android:layout_below="@+id/tip_tv"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="22dp"/>
+
+    <EditText
+        android:id="@+id/detail_address_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tip2_tv"
+        android:hint="详细地址 ，店名/建筑物/门牌号/单元/楼层"
+        android:textColorHint="@color/color_cccccc"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_14"
+        android:background="@color/color_ffffff"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"/>
+
+
+</RelativeLayout>

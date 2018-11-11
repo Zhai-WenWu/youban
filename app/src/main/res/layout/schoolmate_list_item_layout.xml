@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:id="@+id/user_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_img"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            app:border_color="@color/color_00000000"
+            app:border_width="0dp" />
+
+
+        <TextView
+            android:id="@+id/user_nickname_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/user_img"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/user_img"
+            android:maxWidth="100dp"
+            android:singleLine="true"
+            android:text="名称"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/user_age_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/user_img"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/user_img"
+            android:maxWidth="100dp"
+            android:singleLine="true"
+            android:text="23岁"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_11" />
+
+        <TextView
+            android:id="@+id/user_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/user_img"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/user_age_text"
+            android:maxWidth="100dp"
+            android:singleLine="true"
+            android:text="北京市"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_11" />
+
+
+        <ImageView
+            android:id="@+id/alumnus_text"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@+id/user_nickname_text"
+            android:layout_alignTop="@+id/user_nickname_text"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/user_nickname_text"
+            android:src="@mipmap/alumns_icon"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/more_img"
+            android:singleLine="true"
+            android:text="2017-09-22"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_11" />
+
+        <ImageView
+            android:id="@+id/more_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/user_nickname_text"
+            android:layout_marginRight="10dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:src="@mipmap/post_detail_more_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/distance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/user_img"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_11" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_school_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_layout"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="6dp"
+        android:maxWidth="100dp"
+        android:singleLine="true"
+        android:text="北京清华大学"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_11" />
+
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/tv_school_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:text="帖子内容"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/linear_image_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/content_text"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:minHeight="220dp"
+            android:minWidth="200dp"
+            android:scaleType="center"
+            android:src="@color/color_e6e6e6" />
+
+        <ImageView
+            android:id="@+id/video_play_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/video_play_icon"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_image_two"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingTop="12dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/share_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycler_image"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@+id/praise_text"
+        android:drawableLeft="@mipmap/share_small_icon"
+        android:drawablePadding="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="0"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_11" />
+
+    <ImageView
+        android:id="@+id/delete_img"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignTop="@+id/praise_text"
+        android:layout_marginRight="25dp"
+        android:layout_toLeftOf="@+id/share_text"
+        android:src="@mipmap/delete_icon"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/from_tag_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/praise_text"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/recycler_image"
+        android:layout_marginLeft="10dp"
+        android:drawableLeft="@mipmap/home_post_label_icon"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:paddingTop="3dp"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_11"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/from_tag_layout_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/from_tag_view"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/recycler_image"
+        android:layout_toRightOf="@+id/from_tag_view"
+        android:background="@drawable/shape_round_20_stroke_333333"
+        android:gravity="center_vertical"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        android:singleLine="true"
+        android:text="同学帮帮忙"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_11"
+        android:visibility="gone" />
+
+
+    <TextView
+        android:id="@+id/praise_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycler_image"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@+id/comment_text"
+        android:drawableLeft="@mipmap/home_post_praise_nor_icon"
+        android:drawablePadding="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="0"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_11" />
+
+    <TextView
+        android:id="@+id/comment_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/recycler_image"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="17dp"
+        android:drawableLeft="@mipmap/home_post_comment_icon"
+        android:drawablePadding="5dp"
+        android:text="0"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_11" />
+
+    <View
+        android:id="@+id/line_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/comment_text"
+        android:background="@color/color_f4f4f4"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

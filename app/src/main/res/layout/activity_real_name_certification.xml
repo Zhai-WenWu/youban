@@ -1,0 +1,227 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f4f4f4"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/title_layout"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.ToolBarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_tool_bar_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_tip_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="15.5dp"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_11" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="14.5dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="真实姓名"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_size_14" />
+
+                <EditText
+                    android:id="@+id/edit_name_rela"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="24dp"
+                    android:background="@null"
+                    android:hint="请输入您的真实姓名"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_cccccc"
+                    android:textSize="@dimen/text_size_13" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_e6e6e6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="手机号码"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_size_14" />
+
+                <EditText
+                    android:id="@+id/edit_phonenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="24dp"
+                    android:background="@null"
+                    android:hint="请输入您的手机号"
+                    android:inputType="phone"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_cccccc"
+                    android:textSize="@dimen/text_size_13" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_e6e6e6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="身份证号"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_size_14" />
+
+                <EditText
+                    android:id="@+id/edit_id_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="24dp"
+                    android:background="@null"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="请输入您的身份证号码"
+                    android:inputType="number"
+                    android:textColor="@color/color_333333"
+                    android:textColorHint="@color/color_cccccc"
+                    android:textSize="@dimen/text_size_13" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_e6e6e6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30.5dp"
+                android:text="上传身份证正面和反面照片"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_13" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_card_front"
+                        android:layout_width="170dp"
+                        android:layout_height="110dp"
+                        android:background="@drawable/idcard_positive" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.5dp"
+                        android:text="正面照片（头像面）"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_size_11" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_card_reverse"
+                        android:layout_width="170dp"
+                        android:layout_height="110dp"
+                        android:background="@drawable/idcard_back" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.5dp"
+                        android:text="反面照片（国徽面）"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_size_11" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_tip_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12.5dp"
+                android:layout_marginTop="24.5dp"
+                android:text="注意：照片大小不要超过1.5M"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_11" />
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_submit"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="17.5dp"
+                android:layout_marginRight="17.5dp"
+                android:layout_marginTop="87dp"
+                app:cardBackgroundColor="@color/color_d5d5d5"
+                app:cardCornerRadius="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="提交"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_16" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

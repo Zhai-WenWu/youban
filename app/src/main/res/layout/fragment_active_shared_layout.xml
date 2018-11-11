@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:paddingBottom="15dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:id="@id/root_layout">
+
+    <TextView
+        android:id="@+id/left_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        android:text="分享转发了"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13"
+        android:paddingTop="32dp"
+        android:paddingBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/form_user_nickname_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="120dp"
+        android:singleLine="true"
+        android:text="名称"
+        android:textColor="@color/color_576b95"
+        android:textSize="@dimen/text_size_13"
+        android:paddingTop="32dp"
+        android:paddingBottom="10dp"
+        android:layout_toRightOf="@+id/left_tip"/>
+
+    <TextView
+        android:id="@+id/right_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        android:text="的活动"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13"
+        android:paddingTop="32dp"
+        android:paddingBottom="10dp"
+        android:layout_toRightOf="@+id/form_user_nickname_text"/>
+
+    <ImageView
+        android:id="@+id/active_img"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/form_user_nickname_text"
+        android:layout_marginTop="3dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"/>
+
+
+
+    <TextView
+        android:id="@+id/active_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/active_img"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/active_img"
+        android:singleLine="true"
+        android:text="活动名称"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13"
+        android:layout_marginTop="6.5dp"
+        android:layout_alignLeft="@id/user_img"/>
+
+    <TextView
+        android:id="@+id/active_time_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/active_name_tv"
+        android:layout_marginTop="12dp"
+        android:layout_toLeftOf="@+id/active_apply_num_tv"
+        android:singleLine="true"
+        android:text="活动时间："
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_11"
+        android:layout_alignLeft="@id/user_img"/>
+
+    <TextView
+        android:id="@+id/active_place_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/active_time_tv"
+        android:layout_marginTop="7dp"
+        android:layout_toLeftOf="@+id/active_charge_tv"
+        android:singleLine="true"
+        android:text="活动地点："
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_11"
+        android:layout_alignLeft="@id/user_img"
+        />
+
+    <TextView
+        android:id="@+id/active_distance_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/active_place_tv"
+        android:layout_marginTop="7dp"
+        android:singleLine="true"
+        android:text="活动距你："
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_11"
+        android:visibility="gone"
+        android:layout_alignLeft="@+id/user_img"
+        />
+
+
+
+    <TextView
+        android:id="@+id/active_apply_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/active_time_tv"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@id/active_img"
+        android:singleLine="true"
+        android:text="0人参加"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_11" />
+
+
+
+
+    <TextView
+        android:id="@+id/active_charge_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/active_apply_num_tv"
+        android:layout_below="@+id/active_time_tv"
+        android:layout_marginTop="7dp"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_11"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/active_type_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_below="@+id/active_distance_tv"
+        android:gravity="center"
+        android:text="Ta想约你一起"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13"
+        android:layout_marginTop="17dp"
+        android:layout_alignLeft="@id/user_img"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_hobby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/active_distance_tv"
+        android:layout_marginRight="38dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/active_type_tv"/>
+
+    <ImageView
+        android:id="@+id/active_status_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/active_status_unenable_icon"
+        android:layout_marginRight="68dp"
+        android:layout_below="@+id/top_header_view"
+        android:layout_marginTop="13dp"/>
+
+</RelativeLayout>

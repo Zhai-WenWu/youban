@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2.5dp">
+
+    <ImageView
+        android:id="@+id/iv_all_people_activity"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_all_people_activity"
+        android:background="@drawable/shape_round_18_bottom_circle_solid_ffffff">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginBottom="5.5dp"
+            android:layout_marginLeft="5.5dp"
+            android:layout_marginRight="4.5dp"
+            android:src="@drawable/def"
+            android:layout_marginTop="5.5dp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.5dp"
+            android:layout_toEndOf="@+id/iv_icon"
+            android:ellipsize="end"
+            android:maxLength="6"
+            android:text="匿名发布"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_11" />
+
+        <ImageView
+            android:id="@+id/iv_sex"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="1dp"
+            android:layout_toEndOf="@+id/iv_icon" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh_layout_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f4f4f4"
+    android:paddingLeft="11dp"
+    android:paddingRight="11dp">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never" />
+
+
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/empty_page_layout"
+        android:visibility="visible" />
+
+</com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>

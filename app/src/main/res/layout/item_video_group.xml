@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 视频装载控件 -->
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black" />
+
+    <!-- 空麦可用 -->
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_a0a0a0"
+        android:gravity="center"
+        android:text="空麦可用"
+        android:textColor="@color/color_f3f3f3"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="gone" />
+
+
+    <include
+        android:id="@+id/colse_mic_view"
+        layout="@layout/view_video_group_mic_no_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- 麦序 -->
+    <ImageView
+        android:id="@+id/img_mic_order"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="7dp" />
+
+
+</RelativeLayout>

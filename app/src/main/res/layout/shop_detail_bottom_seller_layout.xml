@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="49dp"
+        android:background="@color/color_ffffff">
+
+        <View android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_cccccc"/>
+
+        <TextView
+            android:id="@+id/add_goods_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:text="添加商品"
+            android:textSize="@dimen/text_size_14"
+            android:layout_centerVertical="true"
+            android:paddingLeft="16dp"
+            android:drawableLeft="@mipmap/goods_add_icon"
+            android:drawablePadding="9dp"
+            />
+
+        <TextView
+            android:id="@+id/sales_record_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:text="销售记录"
+            android:textSize="@dimen/text_size_14"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="16dp"/>
+
+    </RelativeLayout>

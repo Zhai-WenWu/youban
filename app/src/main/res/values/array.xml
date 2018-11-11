@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="user_level_icon">
+        <item>@drawable/level_00_00</item>
+        <item>@drawable/level_01</item>
+        <item>@drawable/level_02</item>
+        <item>@drawable/level_03</item>
+        <item>@drawable/level_04</item>
+        <item>@drawable/level_05</item>
+        <item>@drawable/level_06</item>
+        <item>@drawable/level_07</item>
+        <item>@drawable/level_08</item>
+        <item>@drawable/level_09</item>
+        <item>@drawable/level_10</item>
+        <item>@drawable/level_11</item>
+        <item>@drawable/level_12</item>
+        <item>@drawable/level_13</item>
+        <item>@drawable/level_14</item>
+        <item>@drawable/level_15</item>
+        <item>@drawable/level_16</item>
+        <item>@drawable/level_17</item>
+        <item>@drawable/level_18</item>
+        <item>@drawable/level_19</item>
+        <item>@drawable/level_20</item>
+        <item>@drawable/level_21</item>
+        <item>@drawable/level_22</item>
+        <item>@drawable/level_23</item>
+        <item>@drawable/level_24</item>
+        <item>@drawable/level_25</item>
+    </array>
+    <array name="video_group_mic_order_icon">
+        <item>@drawable/video_group_mic_first</item>
+        <item>@drawable/video_group_mic_second</item>
+        <item>@drawable/video_group_mic_third</item>
+        <item>@drawable/video_group_mic_fourth</item>
+        <item>@drawable/video_group_mic_fifth</item>
+        <item>@drawable/video_group_mic_sixth</item>
+        <item>@drawable/video_group_mic_seventh</item>
+    </array>
+
+
+</resources>

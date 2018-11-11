@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_view"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/text_view_yk_bean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/text_view_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/user_balance_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14" />
+
+
+        </LinearLayout>
+
+
+        <cn.bjhdltcdn.p2plive.widget.CustomViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="178dp"
+            android:layout_below="@+id/layout_view"
+            android:background="@color/color_f4f4f4" />
+
+        <LinearLayout
+            android:id="@+id/item_layout_view"
+            android:layout_width="match_parent"
+            android:layout_height="9dp"
+            android:layout_below="@+id/view_pager"
+            android:background="@color/color_f4f4f4"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="3dp" />
+
+        <LinearLayout
+            android:id="@+id/item_layout_view_2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/item_layout_view"
+            android:background="@color/white"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/pay_view"
+                android:layout_width="55dp"
+                android:layout_height="30dp"
+                android:background="@drawable/shape_round_5_stroke_ff9000_width_1"
+                android:gravity="center"
+                android:text="充值"
+                android:textColor="@color/color_ff9000"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/text_view_empty_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14" />
+
+
+            <TextView
+                android:id="@+id/send_view"
+                android:layout_width="55dp"
+                android:layout_height="30dp"
+                android:background="@drawable/shape_round_10_solid_ffda44"
+                android:gravity="center"
+                android:text="赠送"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

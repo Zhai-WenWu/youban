@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_7e7e7e"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/props_image_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="center"
+                android:src="@mipmap/ic_launcher" />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/props_imge_type_view"-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="14dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:layout_marginTop="2dp"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:src="@drawable/props_type_xin"-->
+            <!--android:visibility="visible" />-->
+
+            <TextView
+                android:id="@+id/props_name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/props_image_view"
+                android:layout_centerHorizontal="true"
+                android:text="棒棒糖"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/props_glod_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/props_name_view"
+                android:layout_centerHorizontal="true"
+                android:text="10金币"
+                android:textColor="@color/color_c4c4c4"
+                android:textSize="@dimen/text_size_10" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

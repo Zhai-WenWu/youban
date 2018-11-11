@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_33333333"
+    >
+
+    <View android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:id="@+id/out_layout"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/out_layout"
+        android:background="@color/color_ffffff">
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="范围"
+            android:textColor="@color/color_666666"
+            android:layout_marginTop="12.5dp"
+            android:textSize="@dimen/text_size_12"
+            android:id="@+id/tv_fw"
+            android:layout_marginLeft="10dp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/distance_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fw"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="类型"
+            android:textColor="@color/color_666666"
+            android:layout_marginTop="16.5dp"
+            android:textSize="@dimen/text_size_12"
+            android:id="@+id/tv_lx"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/distance_recycler_view"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/category_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_lx"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="重置"
+            android:textColor="@color/color_333333"
+            android:layout_marginTop="46dp"
+            android:textSize="@dimen/text_size_13"
+            android:id="@+id/tv_reset"
+            android:layout_marginLeft="45dp"
+            android:layout_below="@+id/category_recycler_view"
+            android:background="@drawable/shape_round_40_stroke_e6e6e6_solid_f9f9f9"
+            android:paddingLeft="27dp"
+            android:paddingRight="27dp"
+            android:gravity="center"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:text="确定"
+            android:textColor="@color/color_333333"
+            android:layout_marginTop="46dp"
+            android:textSize="@dimen/text_size_13"
+            android:id="@+id/tv_ok"
+            android:layout_marginRight="45dp"
+            android:layout_below="@+id/category_recycler_view"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="27dp"
+            android:paddingRight="27dp"
+            android:gravity="center"
+            android:background="@drawable/shape_round_40_stroke_e6e6e6_solid_ffee00"/>
+    </RelativeLayout>
+
+</RelativeLayout>

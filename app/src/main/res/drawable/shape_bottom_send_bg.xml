@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="false"
+        android:drawable="@drawable/shape_bottom_send_unenable_bg"
+        />
+    <item
+        android:state_enabled="true"
+        android:drawable="@color/color_ffb921" />
+</selector>

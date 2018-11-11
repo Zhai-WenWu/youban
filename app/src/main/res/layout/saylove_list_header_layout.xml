@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_layout">
+
+        <ImageView
+            android:id="@+id/bg_img"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/saylove_list_bg"
+            />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/title_back_write_icon"
+            android:id="@+id/back_img"
+            android:padding="15dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/bg_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="表白墙"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_30"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/bg_content_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="遇见你是最美丽的意外"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_20"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/bg_title_text_view"/>
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/bg_img"
+            android:visibility="gone"
+            android:id="@+id/sort_layout">
+
+        <View android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/color_ffffff"
+            android:id="@+id/write_line"/>
+
+        <TextView
+            android:id="@+id/order_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/write_line"
+            android:layout_alignBottom="@+id/write_line"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_alignParentRight="true"
+            android:text="最新发布"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_13"
+            android:drawableRight="@mipmap/home_recommend_sort_close_icon"
+            android:drawablePadding="5dp"/>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_eeeeee"
+            android:layout_below="@+id/write_line"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

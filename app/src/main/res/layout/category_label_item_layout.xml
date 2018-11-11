@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="95dp"
+    android:layout_height="43dp"
+    android:paddingRight="7dp">
+
+    <CheckBox android:layout_width="85dp"
+        android:layout_height="43dp"
+        android:text="标签名称"
+        android:id="@+id/tv_label"
+        android:button="@null"
+        android:checked="false"
+        android:gravity="right|center_vertical"
+        android:paddingRight="7dp"
+        android:textSize="@dimen/text_size_11"/>
+
+    <ImageView android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/error_bg"
+        android:layout_marginLeft="7.5dp"
+        android:id="@+id/label_img"
+        android:layout_centerVertical="true" />
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/delect_label_icon"
+        android:layout_alignRight="@+id/tv_label"
+        android:layout_alignBottom="@+id/tv_label"
+        android:id="@+id/delete_view"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+

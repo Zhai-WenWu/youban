@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f4f4f4"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <EditText
+        android:id="@+id/edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="想说点儿什么？(选填)"
+        android:maxLength="200"
+        android:padding="10dp"
+        android:textColor="@color/color_333333"
+        android:textColorHint="@color/color_999999"
+        android:textSize="@dimen/text_size_14" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff">
+
+        <TextView
+            android:id="@+id/tv_num_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="0/200"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_11" />
+
+
+        <RelativeLayout
+            android:id="@+id/video_layout_view"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:layout_below="@+id/recycle_view"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="17dp">
+
+            <ImageView
+                android:id="@+id/img_add_video"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/add_video_icon"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/delete_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/active_img_delete_icon"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/video_play_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="38dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/video_play_icon"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:id="@id/root_layout">
+
+    <TextView
+        android:id="@+id/left_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        android:text="分享转发了"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13"
+        android:paddingTop="14dp"
+        android:paddingBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/form_user_nickname_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="120dp"
+        android:singleLine="true"
+        android:text="名称"
+        android:textColor="@color/color_576b95"
+        android:textSize="@dimen/text_size_13"
+        android:paddingTop="14dp"
+        android:paddingBottom="10dp"
+        android:layout_toRightOf="@+id/left_tip"/>
+
+    <TextView
+        android:id="@+id/right_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        android:text="的帖子"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13"
+        android:paddingTop="14dp"
+        android:paddingBottom="10dp"
+        android:layout_toRightOf="@+id/form_user_nickname_text"/>
+
+
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/form_user_nickname_text"
+        android:layout_marginRight="15dp"
+        android:maxLines="2"
+        android:text="帖子内容"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/linear_image_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content_text"
+        android:paddingTop="12dp"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:id="@+id/img_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@color/color_e6e6e6" />
+
+        <ImageView
+            android:id="@+id/video_play_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/video_play_icon"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_image_two"
+        android:paddingTop="12dp"
+        android:visibility="visible" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_post_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycler_image"
+        android:paddingTop="14dp"
+        android:paddingBottom="15dp"/>
+
+    <!--<TextView-->
+    <!--android:id="@+id/type_tip_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/recycler_post_label"-->
+    <!--android:background="@drawable/shape_round_20_stroke_333333"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:singleLine="true"-->
+    <!--android:text="校园表白墙"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:textColor="@color/color_333333"-->
+    <!--android:textSize="@dimen/text_size_10"-->
+    <!--android:visibility="gone"-->
+    <!--android:paddingBottom="3dp"-->
+    <!--android:paddingLeft="7.5dp"-->
+    <!--android:paddingRight="7.5dp"-->
+    <!--android:paddingTop="3dp"-->
+    <!--android:layout_marginLeft="12dp"/>-->
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/post_label_one_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignBottom="@+id/post_label_two_layout"-->
+    <!--android:layout_alignTop="@+id/post_label_two_layout"-->
+    <!--android:drawableLeft="@mipmap/home_post_label_icon"-->
+    <!--android:drawablePadding="5dp"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:singleLine="true"-->
+    <!--android:textColor="@color/color_999999"-->
+    <!--android:textSize="@dimen/text_size_11"-->
+    <!--android:visibility="gone"-->
+    <!--android:layout_marginLeft="12dp"/>-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/post_label_two_layout"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/recycler_post_label"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_marginTop="15dp"-->
+    <!--android:layout_toRightOf="@+id/post_label_one_text"-->
+    <!--android:background="@drawable/shape_round_20_stroke_333333"-->
+    <!--android:paddingBottom="3dp"-->
+    <!--android:paddingLeft="7.5dp"-->
+    <!--android:paddingRight="7.5dp"-->
+    <!--android:paddingTop="3dp"-->
+    <!--android:visibility="gone">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/post_label_two_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:maxEms="5"-->
+    <!--android:singleLine="true"-->
+    <!--android:text="二级标签"-->
+    <!--android:textColor="@color/color_333333"-->
+    <!--android:textSize="@dimen/text_size_10" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/post_label_two_text_tips_view"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_toRightOf="@+id/post_label_two_text"-->
+    <!--android:maxEms="5"-->
+    <!--android:singleLine="true"-->
+    <!--android:text=""-->
+    <!--android:textColor="@color/color_333333"-->
+    <!--android:textSize="@dimen/text_size_10" />-->
+    <!--</RelativeLayout>-->
+
+
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/store_layout"
+        android:layout_below="@+id/recycler_post_label"
+        android:background="@color/color_fafafa"
+        android:paddingTop="7.5dp"
+        android:paddingBottom="7.5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="12.5dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/store_img"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/store_icon"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/store_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/store_img"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/store_img"
+            android:maxWidth="100dp"
+            android:singleLine="true"
+            android:text="名称"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_10" />
+
+        <TextView
+            android:id="@+id/recruit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/store_img"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/store_name_text"
+            android:maxWidth="100dp"
+            android:singleLine="true"
+            android:text="招聘店员"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_8"
+            android:background="@drawable/shape_round_14_solid_e6e6e6"
+            android:paddingLeft="6.5dp"
+            android:paddingTop="2.5dp"
+            android:paddingRight="6.5dp"
+            android:paddingBottom="2.5dp"
+            android:layout_alignBaseline="@+id/store_name_text"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/store_name_text"
+            android:layout_toRightOf="@+id/store_img"
+            android:layout_alignLeft="@+id/store_name_text"
+            android:id="@+id/store_label_recycle_view"
+            android:layout_marginTop="4dp"/>
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_right"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/store_layout"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/share_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/share_small_icon"
+                android:drawablePadding="5dp"
+                android:text="0"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_11"
+                android:paddingTop="8dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+        </LinearLayout>
+
+        <!--<LinearLayout android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:visibility="gone">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/delete_img"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@mipmap/delete_icon"        -->
+        <!--android:paddingTop="8dp"-->
+        <!--android:paddingBottom="15dp"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:visibility="visible"/>-->
+        <!--</LinearLayout>-->
+
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+            <TextView
+                android:id="@+id/praise_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/home_post_praise_nor_icon"
+                android:text="0"
+                android:drawablePadding="5dp"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_11"
+                android:paddingTop="8dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/comment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/home_post_comment_icon"
+                android:drawablePadding="5dp"
+                android:text="0"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_11"
+                android:paddingTop="8dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

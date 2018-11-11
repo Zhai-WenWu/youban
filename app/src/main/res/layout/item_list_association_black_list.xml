@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:background="@color/color_ffffff">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_icon"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/tv_distance"
+        android:layout_toRightOf="@+id/img_icon">
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxEms="12"
+            android:singleLine="true"
+            android:text="昵称"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_13" />
+
+        <ImageView
+            android:id="@+id/img_level"
+            android:layout_width="30dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_nickname"
+            android:src="@mipmap/level_one" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nickname"
+            android:layout_marginTop="5.5dp"
+            android:drawableLeft="@mipmap/boy_icon"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:text="0岁"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_11" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nickname"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5.5dp"
+            android:layout_toRightOf="@+id/tv_age"
+            android:text="位置"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_11" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="13.5dp"
+        android:text="0km"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_11" />
+
+    <TextView
+        android:id="@+id/tv_relieve"
+        android:layout_width="65dp"
+        android:layout_height="23dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="11.5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_round_8_stroke_8ed6ff"
+        android:gravity="center"
+        android:text="解除禁言"
+        android:textColor="@color/color_8ed6ff"
+        android:textSize="@dimen/text_size_12" />
+</RelativeLayout>

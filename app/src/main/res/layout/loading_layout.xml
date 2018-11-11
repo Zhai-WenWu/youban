@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lly_loading"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/footer_padding">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progress_loading"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_centerVertical="true"
+            android:indeterminateDrawable="@drawable/round_spinner_apple" />
+
+        <TextView
+            android:id="@+id/tv_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="35dip"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/progress_loading"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:text="@string/str_loading_default_hint"
+            android:textColor="@color/color_000000"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

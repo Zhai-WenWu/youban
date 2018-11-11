@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_f4f4f4">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_layout"
+        android:background="@color/color_ffffff">
+
+    <EditText android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/title_fragment"
+        android:id="@+id/search_edittext"
+        android:background="@drawable/shape_round_10_solid_f4f4f4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:layout_toLeftOf="@+id/search_textview"
+        android:drawableLeft="@mipmap/home_search_icon"
+        android:drawablePadding="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="40dp"
+        android:hint="群组、用户"
+        android:textColorHint="@color/color_999999"
+        android:textSize="@dimen/text_size_13"
+        android:textColor="@color/color_333333"
+        android:singleLine="true"
+        />
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/edit_delect_icon"
+        android:layout_alignTop="@+id/search_edittext"
+        android:layout_alignBottom="@+id/search_edittext"
+        android:layout_alignRight="@+id/search_edittext"
+        android:padding="6dp"
+        android:id="@+id/delete_view"/>
+
+    <TextView android:layout_width="65dp"
+        android:layout_height="44dp"
+        android:layout_alignParentRight="true"
+        android:text="取消"
+        android:id="@+id/search_textview"
+        android:layout_below="@+id/title_fragment"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="@color/color_666666"/>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_d3d3d3"
+        android:layout_below="@+id/search_edittext"
+        android:id="@+id/line_view"/>
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_layout"
+        android:background="@color/color_ffffff"
+        android:visibility="visible"
+        android:id="@+id/key_layout">
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="大家都在搜"
+        android:id="@+id/key_text"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_15"
+        android:textColor="@color/color_999999"
+        android:layout_margin="15dp"
+        />
+
+    <cn.bjhdltcdn.p2plive.widget.tagview.TagContainerLayout
+        android:id="@+id/tag_container_view"
+        android:layout_below="@+id/key_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:container_enable_drag="false"
+        app:horizontal_interval="20dp"
+        app:tag_clickable="true"
+        app:tag_enable_cross="false"
+        app:tag_theme="none"
+        app:container_border_color="@color/transparent"
+        app:container_background_color="@color/color_00000000"
+        app:vertical_interval="20dp"
+        app:tag_background_color="@color/color_f4f4f4"
+        app:tag_border_color="@color/color_00000000"
+        app:tag_border_width="0dp"
+        app:tag_corner_radius="5dp"
+        app:tag_text_size="@dimen/text_size_13"
+        app:tag_text_color="@color/color_333333"
+        app:tag_horizontal_padding="13dp"
+        app:tag_vertical_padding="8dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_layout"
+        android:dividerHeight="0dp"
+        android:divider="@color/color_00000000"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/empty_page_layout"
+        android:visibility="gone"
+        android:layout_below="@+id/search_layout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+</RelativeLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_ffffff"
+    >
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="49dp"
+        android:id="@+id/nested_scroll_view">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <fragment
+                android:id="@+id/banner_frame"
+                android:name="cn.bjhdltcdn.p2plive.ui.fragment.HomeBannerFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/goods_name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/banner_frame"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="13dp"
+                android:text="商品名称"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_15"
+                android:lineSpacingExtra="4dp"/>
+
+            <TextView
+                android:id="@+id/sale_price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goods_name_view"
+                android:layout_marginTop="19dp"
+                android:text="¥"
+                android:textColor="@color/color_ffb700"
+                android:textSize="@dimen/text_size_10"
+                android:layout_alignLeft="@+id/goods_name_view"/>
+
+            <TextView
+                android:id="@+id/sale_price_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goods_name_view"
+                android:layout_marginTop="10.5dp"
+                android:text="现价"
+                android:textColor="@color/color_ffb700"
+                android:textSize="@dimen/text_size_18"
+                android:layout_toRightOf="@+id/sale_price_text"
+                android:layout_marginLeft="2.5dp"/>
+
+
+            <TextView
+                android:id="@+id/product_price_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goods_name_view"
+                android:layout_marginTop="13.5dp"
+                android:text="¥ 原价"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_15"
+                android:layout_toRightOf="@+id/sale_price_text_view"
+                android:layout_marginLeft="6dp"/>
+
+            <TextView
+                android:id="@+id/product_discount_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goods_name_view"
+                android:layout_marginTop="16dp"
+                android:text="1折"
+                android:textColor="@color/color_ea3323"
+                android:textSize="@dimen/text_size_10"
+                android:layout_toRightOf="@+id/product_price_text_view"
+                android:layout_marginLeft="9.5dp"
+                android:background="@drawable/shape_round_4_stroke_ea3323"
+                android:paddingLeft="4.5dp"
+                android:paddingRight="4.5dp"
+                android:paddingTop="0.5dp"
+                android:paddingBottom="0.5dp"/>
+
+            <TextView
+                android:id="@+id/buyer_num_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sale_price_text_view"
+                android:layout_marginTop="9dp"
+                android:layout_alignLeft="@+id/goods_name_view"
+                android:text="0人付款"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_12" />
+
+
+            <TextView
+                android:id="@+id/product_remain_total_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/buyer_num_text_view"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/buyer_num_text_view"
+                android:text="库存：0"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_12" />
+
+            <ImageView
+                android:id="@+id/plus_img"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/goods_name_view"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@mipmap/goods_plus_icon"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/num_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/plus_img"
+                android:layout_alignTop="@+id/plus_img"
+                android:layout_marginLeft="7.5dp"
+                android:layout_marginRight="7.5dp"
+                android:layout_toLeftOf="@+id/plus_img"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_13" />
+
+            <ImageView
+                android:id="@+id/reduce_img"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_below="@+id/goods_name_view"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/num_text_view"
+                android:background="@mipmap/goods_reduce_icon"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/goods_describe_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/goods_name_view"
+                android:layout_below="@+id/product_remain_total_text_view"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="10dp"
+                android:text="商品描述"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_12"
+                android:visibility="gone"
+                android:lineSpacingExtra="4dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_image_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/goods_describe_view"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="25dp"/>
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        tools:layout="@layout/fragment_title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/tip_text"
+        android:layout_alignParentBottom="true"
+        android:text="已下架"
+        android:textSize="@dimen/text_size_15"
+        android:textColor="@color/color_333333"
+        android:background="@color/color_f7f7f7"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginBottom="49dp"/>
+    <ViewStub
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:id="@+id/buyer_operation_layout"
+        android:layout_alignParentBottom="true"
+        android:layout="@layout/shop_detail_bottom_buyer_layout" />
+
+</RelativeLayout>

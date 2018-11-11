@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/title_layout"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.ToolBarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_tool_bar_layout" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_edittext" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_order_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_edittext" />
+
+</LinearLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff">
+
+    <View android:layout_width="match_parent"
+        android:layout_height="11dp"
+        android:background="@color/color_f4f4f4"
+        android:id="@+id/lineView"
+        android:visibility="gone"/>
+
+
+    <View android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e6e6e6"
+        android:id="@+id/center_lineView"
+        android:visibility="gone"
+        android:layout_below="@+id/lineView"/>
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_13"
+        android:text="用户"
+        android:layout_below="@+id/center_lineView"
+        android:layout_margin="10dp"
+        android:visibility="gone"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_img"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@+id/title_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="visible"/>
+
+
+    <ImageView
+        android:id="@+id/organ_img"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@+id/title_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"/>
+
+
+
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_toRightOf="@+id/organ_img"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_14"
+        android:text="名称"
+        android:layout_alignTop="@+id/organ_img"
+        android:maxEms="10"/>
+
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/organ_img"
+        android:layout_below="@+id/name_text"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_11"
+        android:text="ID:100000"
+        />
+
+    <TextView
+        android:id="@+id/orgain_join_text"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/organ_img"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/color_333333"
+        android:text="加入"
+        android:textSize="@dimen/text_size_12"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_round_10_solid_ffee00"
+        android:gravity="center"
+        android:layout_marginRight="15dp"
+        android:visibility="visible"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"/>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e6e6e6"
+        android:id="@+id/bottom_lineView"
+        android:visibility="gone"
+        android:layout_below="@+id/organ_img"/>
+
+    <TextView
+        android:id="@+id/more_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_12"
+        android:text="更多"
+        android:layout_centerHorizontal="true"
+        android:drawableRight="@mipmap/active_arrow_icon"
+        android:drawablePadding="4dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        android:layout_below="@+id/bottom_lineView"/>
+
+
+
+
+</RelativeLayout>

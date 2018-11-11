@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_f4f4f4">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        tools:layout="@layout/fragment_title" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_fragment">
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:id="@+id/required_layout">
+
+            <EditText
+                android:id="@+id/active_content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="140dp"
+                android:textColor="@color/color_333333"
+                android:hint="填写活动主题或简介"
+                android:textColorHint="@color/color_cccccc"
+                android:textSize="@dimen/text_size_15"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_round_0_stroke_bebebe_solid_fafafa"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="25dp"
+                android:maxLength="200"/>
+
+                <TextView
+                    android:id="@+id/tv_num_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text="0/200"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_11"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@+id/active_content_tv"
+                    android:layout_marginBottom="5dp"/>
+
+
+            <TextView
+                android:id="@+id/active_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:text="活动时间："
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@mipmap/active_time_icon"
+                android:drawablePadding="5dp"
+                android:layout_below="@+id/active_content_tv"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/active_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_6a95fe"
+                android:text="【选择时间】"
+                android:textSize="@dimen/text_size_14"
+                android:layout_toRightOf="@+id/active_time_text"
+                android:layout_alignTop="@+id/active_time_text"/>
+            </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/active_place_layout"
+            android:layout_below="@+id/required_layout"
+            android:visibility="visible"
+            android:background="@color/color_ffffff">
+
+
+            <TextView
+                android:id="@+id/active_place_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:text="活动地点："
+                android:textSize="@dimen/text_size_14"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:drawableLeft="@mipmap/active_location_icon"
+                android:drawablePadding="5dp"/>
+
+            <TextView
+                android:id="@+id/active_place_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_6a95fe"
+                android:text="【选择地点】"
+                android:textSize="@dimen/text_size_14"
+                android:layout_toRightOf="@+id/active_place_text"
+                android:layout_alignTop="@+id/active_place_text"/>
+        </RelativeLayout>
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/active_optional_layout"
+                android:layout_below="@+id/active_place_layout"
+                android:visibility="visible"
+                android:background="@color/color_ffffff">
+
+            <TextView
+                android:id="@+id/active_optional_text"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:textColor="@color/color_333333"
+                android:text="以下内容为选填"
+                android:textSize="@dimen/text_size_13"
+                android:paddingBottom="6dp"
+                android:gravity="bottom"
+                android:paddingLeft="10dp"
+                android:background="@color/color_f4f4f4"/>
+
+            <TextView
+                android:id="@+id/active_user_num_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:text="人数："
+                android:textSize="@dimen/text_size_14"
+                android:layout_below="@+id/active_optional_text"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@mipmap/active_user_num_icon"
+                android:drawablePadding="5dp"/>
+
+            <TextView
+                android:id="@+id/active_user_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_6a95fe"
+                android:text="【选择人数】"
+                android:textSize="@dimen/text_size_14"
+                android:layout_toRightOf="@+id/active_user_num_text"
+                android:layout_alignTop="@+id/active_user_num_text"/>
+            <TextView
+                android:id="@+id/active_user_charge_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:text="预算："
+                android:textSize="@dimen/text_size_14"
+                android:layout_below="@+id/active_user_num_text"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@mipmap/active_charge_icon"
+                android:drawablePadding="5dp"
+                android:layout_marginBottom="20dp"/>
+
+            <EditText android:layout_width="wrap_content"
+                android:minWidth="60dp"
+                android:maxWidth="120dp"
+                android:background="@color/color_00000000"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/active_user_charge_text"
+                android:id="@+id/active_user_charge_edit"
+                android:layout_alignBottom="@+id/active_user_charge_text"
+                android:text=""
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/color_6a95fe"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:maxLength="4"/>
+
+
+
+            <View android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_999999"
+                android:layout_toRightOf="@+id/active_user_charge_text"
+                android:layout_alignBottom="@+id/active_user_charge_text"
+                android:layout_alignLeft="@+id/active_user_charge_edit"
+                android:layout_alignRight="@+id/active_user_charge_edit"/>
+
+            <TextView
+                android:id="@+id/active_charge_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_666666"
+                android:text="元/人"
+                android:textSize="@dimen/text_size_14"
+                android:layout_toRightOf="@+id/active_user_charge_edit"
+                android:layout_alignTop="@+id/active_user_charge_text"/>
+
+            </RelativeLayout>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_below="@+id/active_optional_layout"
+                android:id="@+id/line_view"/>
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/active_img_recycleview"
+                android:layout_below="@+id/line_view"
+                android:visibility="visible"
+                android:nestedScrollingEnabled="false"
+                />
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/active_img_recycleview"
+                android:visibility="visible"
+                android:paddingTop="15dp"
+                android:id="@+id/add_img_layout">
+
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/color_ffffff"
+                >
+
+                <TextView
+                    android:id="@+id/active_add_img_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_999999"
+                    android:text="添加图片(选填)"
+                    android:textSize="@dimen/text_size_15"
+                    android:textColorHint="@color/color_666666"
+                    android:drawableLeft="@mipmap/active_add_img_icon"
+                    android:drawablePadding="9dp"
+                    android:layout_centerInParent="true"
+                   />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_11"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:text="0/4"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/add_img_layout"
+                    android:id="@+id/img_num_tv"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_hobby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_num_tv"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"/>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

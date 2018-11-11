@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff"
+    tools:context="cn.bjhdltcdn.p2plive.ui.fragment.CreateAssociationFragmentStup1">
+
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/text_view_tips2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-40dp"
+        android:text="圈子头像"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_15" />
+
+    <LinearLayout
+        android:id="@+id/text_view_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="圈子所属类别："
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/text_view_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:text="体育运动"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/text_view_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:text="-篮球"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_view_4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/text_view_tips"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_e6e6e6"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layout_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/text_view_tips"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="圈子名称："
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+        <EditText
+            android:id="@+id/edit_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center|left"
+            android:hint="为你的圈子取个响亮的名字"
+            android:maxLength="20"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layout_view_2"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_e6e6e6" />
+
+
+    <TextView
+        android:id="@+id/layout_view_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_view_1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="14.5dp"
+        android:text="圈子简介"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_14" />
+
+
+    <EditText
+        android:id="@+id/edit_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/layout_view_3"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/shape_round_0_stroke_bebebe_solid_fafafa"
+        android:gravity="left"
+        android:hint="输入圈子简介"
+        android:maxLength="200"
+        android:padding="10dp"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/content_num_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edit_introduction"
+        android:layout_alignEnd="@+id/edit_introduction"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="0/200"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_11"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/line_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_below="@+id/edit_introduction"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/layout_view_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_view_2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <CheckBox
+            android:id="@+id/checkbox_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/say_love_publish_check_bg"
+            android:drawablePadding="10dp"
+            android:text="我已认真阅读并同意"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/society_protocol_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《圈子管理规范》"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_12" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/next_btn_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="下一步"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

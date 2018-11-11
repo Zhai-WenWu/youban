@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff">
+
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="15dp"
+        android:scaleType="centerCrop"
+        android:src="@color/color_333333" />
+
+    <TextView
+        android:id="@+id/nicke_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/image_view"
+        android:layout_marginTop="2dp"
+        android:singleLine="true"
+        android:layout_marginEnd="100dp"
+        android:layout_toRightOf="@+id/image_view"
+        android:text="任务副本任务副本任务副本任务副本"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_16" />
+
+    <TextView
+        android:id="@+id/secondhobbyname_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_view"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="13dp"
+        android:layout_toRightOf="@+id/image_view"
+        android:background="@drawable/shape_round_5_stroke_666666"
+        android:text="羽毛球"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_8" />
+
+
+    <TextView
+        android:id="@+id/member_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_view"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@+id/secondhobbyname_text_view"
+        android:text="成员 1234 "
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_12" />
+
+
+    <TextView
+        android:id="@+id/post_count_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_view"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/member_text_view"
+        android:text="成员 1234 "
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_12" />
+
+    <TextView
+        android:id="@+id/desc_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/post_count_view"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/image_view"
+        android:text="本圈内帖子、成员信息，仅圈友可见 "
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_12"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_view_1"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_round_10_solid_ffee00"
+        android:text="加入"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_12"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/color_f4f4f4</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--首页tab样式-->
+    <style name="homeTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/color_ffffff</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabPaddingStart">0dp</item>
+        <item name="tabPaddingEnd">0dp</item>
+        <item name="tabBackground">@color/color_ffffff</item>
+    </style>
+
+    <!--商品详情tab样式-->
+    <style name="shopDetailTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/color_ffffff</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabPaddingStart">0dp</item>
+        <item name="tabPaddingEnd">0dp</item>
+        <item name="tabBackground">@color/color_f4f4f4</item>
+    </style>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+
+    <!--图片选择框-->
+    <style name="select_img_dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="color_cc333333_dialog">
+        <item name="android:windowBackground">@color/color_cc333333</item>
+    </style>
+
+    <style name="AppStartLoadTranslucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@mipmap/logo_splash</item>
+    </style>
+
+    <style name="progressDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomDialog_fill" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+
+
+    <style name="dialogWindowAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>
+        <!--<item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>-->
+    </style>
+
+
+    <style name="operation_popwindow_anim_style_up">
+        <item name="android:windowEnterAnimation">@anim/popshow_operation_anim_up</item>
+        <!--<item name="android:windowExitAnimation">@anim/pop</item>-->
+    </style>
+
+    <style name="operation_popwindow_anim_style_down">
+        <item name="android:windowEnterAnimation">@anim/popshow_operation_anim_down</item>
+        <!--<item name="android:windowExitAnimation">@anim/popshow_operation_anim_up</item>-->
+    </style>
+
+
+</resources>

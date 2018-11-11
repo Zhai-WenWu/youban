@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item
+        android:drawable="@drawable/chat_fm_animal_1"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_2"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_3"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_4"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_5"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_6"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_7"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_8"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_9"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_10"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_11"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_12"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_13"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_14"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_15"
+        android:duration="150" />
+    <item
+        android:drawable="@drawable/chat_fm_animal_16"
+        android:duration="150" />
+</animation-list>

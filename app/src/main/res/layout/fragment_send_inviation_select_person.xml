@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_f4f4f4">
+
+
+
+<com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh_layout_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/finish_view"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/recycle_view"
+        android:gravity="center"
+        android:text="已全部加载"
+        android:textColor="@color/color_000000"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/empty_page_layout"
+        android:visibility="visible" />
+
+</com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+</RelativeLayout>

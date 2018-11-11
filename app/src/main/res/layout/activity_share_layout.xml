@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f4f4f4">
+
+
+    <fragment
+        android:id="@+id/title_layout"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.ToolBarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_tool_bar_layout" />
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_below="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_d3d3d3"/>
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_view">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/edit_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="70dp"
+        android:background="@null"
+        android:hint="这一刻的想法..."
+        android:gravity="left"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/color_333333"
+        android:textColorHint="@color/color_999999"
+        android:textSize="@dimen/text_size_14"
+        android:maxLength="200"/>
+
+    <TextView
+        android:id="@+id/count_view"
+        android:layout_below="@+id/edit_view"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="0/200"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_10"/>
+
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_below="@+id/count_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

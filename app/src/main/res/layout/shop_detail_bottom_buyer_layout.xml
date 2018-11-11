@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="49dp"
+        android:background="@color/color_ffffff">
+
+        <View android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_cccccc"/>
+
+    <TextView
+        android:id="@+id/shop_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_333333"
+        android:text="店铺"
+        android:textSize="@dimen/text_size_10"
+        android:paddingLeft="18dp"
+        android:paddingRight="10dp"
+        android:drawableTop="@mipmap/main_store_icon"
+        android:drawablePadding="3.5dp"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+    <TextView
+            android:id="@+id/message_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:text="私信"
+            android:textSize="@dimen/text_size_10"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:drawableTop="@mipmap/main_message_icon"
+            android:drawablePadding="3.5dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/shop_text_view"/>
+
+    <TextView
+        android:id="@+id/call_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_333333"
+        android:text="电话"
+        android:textSize="@dimen/text_size_10"
+        android:paddingRight="20dp"
+        android:paddingLeft="10dp"
+        android:drawableTop="@drawable/user_details_video"
+        android:drawablePadding="3.5dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/message_text_view"/>
+
+    <View android:layout_width="1dp"
+        android:layout_height="25dp"
+        android:background="@color/color_d8d8d8"
+        android:layout_toRightOf="@+id/call_text_view"
+        android:layout_centerVertical="true"
+        android:id="@+id/line_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/line_view"
+        android:paddingLeft="16dp"
+        android:id="@+id/shopping_cart_layout"
+        android:layout_toLeftOf="@+id/settlement_text_view">
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/shopping_cart_icon"
+        android:id="@+id/shopping_cart_img"
+        android:layout_centerVertical="true"
+        android:paddingRight="7.5dp"/>
+
+        <RelativeLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/shopping_cart_img"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/shopping_cart_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_777777"
+                android:text="未选购商品"
+                android:textSize="@dimen/text_size_12"
+                />
+
+            <TextView
+                android:id="@+id/shopping_cart_status_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_999999"
+                android:text=""
+                android:textSize="@dimen/text_size_12"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/shopping_cart_text_view"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+        <TextView
+            android:id="@+id/settlement_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:text="结算"
+            android:textSize="@dimen/text_size_13"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="6.5dp"
+            android:paddingBottom="6.5dp"
+            android:background="@drawable/shape_round_20_solid_ffee00"
+            android:minWidth="79dp"
+            android:gravity="center"
+            android:layout_marginRight="12dp"/>
+
+    </RelativeLayout>

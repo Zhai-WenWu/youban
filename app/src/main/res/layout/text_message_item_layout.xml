@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp">
+
+
+
+        <TextView
+            android:id="@+id/content_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_view_1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/color_333333"/>
+
+        <TextView
+            android:id="@+id/forward_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_view"
+            android:layout_alignParentRight="true"
+            android:text="立即就去"
+            android:drawableRight="@mipmap/inviation_arrow_icon"
+            android:drawablePadding="3dp"
+            android:textSize="@dimen/text_size_13"
+            android:textColor="@color/color_507daf"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"/>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

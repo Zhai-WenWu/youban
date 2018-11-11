@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@color/color_ffffff"
+                android:padding="11dp"
+                android:text="您可以根据您的兴趣偏好创建属于自己的圈子；
+在圈子里您可以找到一群志同道合的小伙伴，和小伙伴一起做有趣的事儿，分享有趣的事儿。"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:padding="11dp"
+                android:text="您可以创建："
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_15" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_e6e6e6" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/view_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="全匿名圈子"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/view_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_1"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/switch_no_name"
+                    android:text="在这里您可以隐藏身份，畅所欲言；
+所有人都可以匿名身份申请加入该圈子，创建者设定之后不能更改。"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_11" />
+
+                <Switch
+                    android:id="@+id/switch_no_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_below="@+id/view_1"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="45dp"
+                    android:switchMinWidth="45dp"
+                    android:textOff=""
+                    android:textOn=""
+                    android:thumb="@android:color/transparent"
+                    android:track="@drawable/switch_track" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/view_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="自定义圈子"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/view_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_5"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/switch_custom"
+                    android:text="在这里您可以选择匿名或非匿名发布内容；
+所有人都可加入该圈子，此圈子由创建者选择是否能匿名发布内容。"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_11" />
+
+                <Switch
+                    android:id="@+id/switch_custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_below="@+id/view_5"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="45dp"
+                    android:switchMinWidth="45dp"
+                    android:textOff=""
+                    android:textOn=""
+                    android:thumb="@android:color/transparent"
+                    android:track="@drawable/switch_track" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_no_name_can_publish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_6"
+                    android:layout_marginTop="15dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="5.5dp"
+                    android:drawableStart="@drawable/selector_group_radiobutton"
+                    android:text="圈子成员可匿名发布"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/view_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="创建匿名聊天室"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/view_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_8"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/switch_creat_no_name_hoom"
+                    android:text="给自己的圈子创建匿名聊天室，可到“圈子详情、首页-聊天频道”进入聊天室，圈子内所有人都能以新的身份进入该聊天室畅聊～"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_11" />
+
+                <Switch
+                    android:id="@+id/switch_creat_no_name_hoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_below="@+id/view_8"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="45dp"
+                    android:switchMinWidth="45dp"
+                    android:textOff=""
+                    android:textOn=""
+                    android:thumb="@android:color/transparent"
+                    android:track="@drawable/switch_track" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:padding="10dp"
+                android:text="权限设置"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_15" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_e6e6e6" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:padding="10dp"
+                android:text="性别限制："
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_14" />
+
+            <RadioGroup
+                android:id="@+id/radiogroup_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkbox_no_name_can_publish"
+                android:layout_toRightOf="@+id/view_7"
+                android:background="@color/color_ffffff"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:id="@+id/radio_btn_no_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="5.5dp"
+                    android:drawableStart="@drawable/selector_group_radiobutton"
+                    android:text="不限"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+                <RadioButton
+                    android:id="@+id/radio_btn_boy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:button="@null"
+                    android:drawablePadding="5.5dp"
+                    android:drawableStart="@drawable/selector_group_radiobutton"
+                    android:text="仅男生加入"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+                <RadioButton
+                    android:id="@+id/radio_btn_girl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:button="@null"
+                    android:drawablePadding="5.5dp"
+                    android:drawableStart="@drawable/selector_group_radiobutton"
+                    android:text="仅女生加入"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:padding="10dp"
+                android:text="内容可见："
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_14" />
+
+            <RadioGroup
+                android:id="@+id/radiogroup_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:orientation="vertical"
+                android:paddingStart="10dp">
+
+                <RadioButton
+                    android:id="@+id/radio_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="5.5dp"
+                    android:drawableStart="@drawable/selector_group_radiobutton"
+                    android:text="全部可见"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14"
+                    android:visibility="visible" />
+
+                <RadioButton
+                    android:id="@+id/radio_btn_circle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="12dp"
+                    android:button="@null"
+                    android:drawablePadding="5.5dp"
+                    android:drawableStart="@drawable/selector_group_radiobutton"
+                    android:text="圈子可见"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12sp"
+                android:layout_marginTop="7dp"
+                android:layout_toLeftOf="@+id/switch_creat_no_name_hoom"
+                android:text="想要重新设置圈子的权限，您可以到“圈子详情-编辑”进行修改"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_11" />
+
+            <Button
+                android:id="@+id/stup0_next_btn_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="25dp"
+                android:text="下一步"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

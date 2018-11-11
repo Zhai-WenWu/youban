@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f4f4f4"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="44dp" />
+
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/refresh_layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/launch_text_view"
+        android:layout_below="@+id/title_fragment"
+        android:background="@color/color_ffffff">
+
+        <ListView
+            android:id="@+id/ll_schoolmate_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/color_00000000"
+            android:dividerHeight="0dp"
+            android:listSelector="@color/color_00000000"
+            android:overScrollMode="never" />
+
+
+        <include
+            android:id="@+id/empty_view"
+            layout="@layout/empty_page_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_schoolmate_help"
+            android:visibility="gone" />
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+    <ImageView
+        android:id="@+id/iv_scroll_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/title_fragment"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/find_scroll_to_top"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/publish_image_view"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:src="@mipmap/post_publish_icon" />
+</RelativeLayout>

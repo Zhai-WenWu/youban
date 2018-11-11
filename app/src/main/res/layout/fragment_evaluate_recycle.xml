@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh_layout_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff">
+
+    <!--<com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+        <!--android:id="@+id/refreshLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<RelativeLayout android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:background="@color/color_fafafa"/>
+
+            <include
+                android:id="@+id/empty_view"
+                layout="@layout/empty_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/recycler_label"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:layout_below="@+id/recycler_label"/>
+
+
+        <!--</RelativeLayout>-->
+
+
+    <!--</com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+
+
+
+
+
+</RelativeLayout>

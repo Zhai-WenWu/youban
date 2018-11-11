@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:paddingBottom="10dp">
+
+    <View
+        android:id="@+id/view_space"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_f4f4f4" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/view_space"
+        android:paddingBottom="8dp"
+        android:paddingStart="8dp">
+
+        <ImageView
+            android:id="@+id/iv_pk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/find_pk" />
+
+        <TextView
+            android:id="@+id/pk_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/iv_pk"
+            android:ellipsize="end"
+            android:maxWidth="200dp"
+            android:paddingStart="10dp"
+            android:singleLine="true"
+            android:text="名称"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/arrow_right"
+            android:paddingEnd="10dp"
+            android:text="PK名称"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_13" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_top"
+        android:orientation="horizontal"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/iv_first"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_lable_first"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/pk_publisher_label"
+                android:gravity="center"
+                android:padding="2dp"
+                android:scaleType="fitCenter"
+                android:text="发布者"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/text_size_10" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_second"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/iv_second"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_lable_second"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/pk_publisher_label"
+                android:gravity="center"
+                android:padding="2dp"
+                android:scaleType="fitCenter"
+                android:text="发布者"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/text_size_10" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_thread"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/iv_thread"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tv_lable_thread"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/pk_publisher_label"
+                android:gravity="center"
+                android:padding="2dp"
+                android:scaleType="fitCenter"
+                android:text="发布者"
+                android:textColor="@color/color_000000"
+                android:textSize="@dimen/text_size_10" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

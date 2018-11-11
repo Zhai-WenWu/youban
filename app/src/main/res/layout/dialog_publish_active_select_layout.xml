@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_33333333">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_fafafa">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_layout"
+            android:layout_marginBottom="0.5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="你想找小伙伴们一起做什么？"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="线上活动，一键邀请"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_size_14" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/online_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_online"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:id="@+id/tv_offline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/online_recycler_view"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp"
+                    android:text="线下活动，邀约组圈"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_size_14" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/offline_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_offline"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    android:id="@+id/tv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/offline_recycler_view"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="25dp"
+                    android:text="你希望哪些性别的小伙伴参加？"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_size_14"
+                    android:visibility="visible" />
+
+
+                <RadioGroup
+                    android:id="@+id/radio_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sex"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <RadioButton
+                        android:id="@+id/radio_all_sex"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_textbg_condition_radio"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="不限性别"
+                        android:textColor="@drawable/selector_textcolor_condition_radio"
+                        android:textSize="@dimen/text_size_13" />
+
+                    <RadioButton
+                        android:id="@+id/radio_boy"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/selector_textbg_condition_radio"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="仅限男生"
+                        android:textColor="@drawable/selector_textcolor_condition_radio"
+                        android:textSize="@dimen/text_size_13" />
+
+                    <RadioButton
+                        android:id="@+id/radio_girl"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/radio_girl"
+                        android:background="@drawable/selector_textbg_condition_radio"
+                        android:button="@null"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:text="仅限女生"
+                        android:textColor="@drawable/selector_textcolor_condition_radio"
+                        android:textSize="@dimen/text_size_13" />
+
+
+                </RadioGroup>
+
+                <View
+                    android:id="@+id/divider_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/radio_sex"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/color_f4f4f4" />
+
+                <TextView
+                    android:id="@+id/tv_orgain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider_line"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="你想邀请哪些小伙伴一起玩儿？"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/orgain_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/tv_orgain"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_round_20_solid_ffee00"
+                    android:gravity="center"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="所有人"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_13" />
+
+                <TextView
+                    android:id="@+id/orgain_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/orgain_all"
+                    android:layout_alignTop="@+id/orgain_all"
+                    android:layout_below="@+id/orgain_all"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/orgain_all"
+                    android:gravity="center_vertical"
+                    android:text="为保证您的隐私，活动内容将不在私密圈子同步"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_11" />
+
+                <TextView
+                    android:id="@+id/tv_only_orgain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/orgain_all"
+                    android:layout_marginLeft="15dp"
+                    android:paddingTop="12.5dp"
+                    android:text="仅邀请圈子的小伙伴"
+                    android:textColor="@color/color_666666"
+                    android:textSize="@dimen/text_size_12"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/orgain_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_only_orgain"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:nestedScrollingEnabled="false"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_above="@+id/bottom_layout"
+            android:background="@color/color_d3d3d3" />
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_fafafa"
+            android:paddingBottom="20dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp"
+            android:paddingTop="13dp">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_round_10_stroke_999999_solid_ffffff"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/color_000000" />
+
+            <TextView
+                android:id="@+id/tv_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_round_10_solid_e6e6e6"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="下一步"
+                android:textColor="@color/color_000000" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

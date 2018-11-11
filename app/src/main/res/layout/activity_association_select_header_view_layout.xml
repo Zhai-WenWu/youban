@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/search_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/shape_round_10_solid_f4f4f4"
+        android:drawableLeft="@mipmap/home_search_icon"
+        android:drawablePadding="5dp"
+        android:hint="搜索"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="8dp"
+        android:paddingRight="40dp"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textColorHint="@color/color_999999"
+        android:textSize="@dimen/text_size_13" />
+
+    <ImageView
+        android:id="@+id/delete_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/search_edittext"
+        android:layout_alignRight="@+id/search_edittext"
+        android:layout_alignTop="@+id/search_edittext"
+        android:padding="6dp"
+        android:src="@mipmap/edit_delect_icon"
+        android:visibility="gone" />
+
+</RelativeLayout>

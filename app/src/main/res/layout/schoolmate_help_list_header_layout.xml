@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/bg_img"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/classmate_help_list_bg" />
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:src="@mipmap/title_back_black_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/bg_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:text="同学帮帮忙"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_30" />
+
+        <TextView
+            android:id="@+id/bg_content_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bg_title_text_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/str_schoolmate_help_top"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_15" />
+
+        <RelativeLayout
+            android:id="@+id/sort_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bg_img"
+            android:layout_marginTop="10dp">
+
+            <View
+                android:id="@+id/write_line"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/color_ffffff" />
+
+            <TextView
+                android:id="@+id/order_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/write_line"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/write_line"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/home_recommend_sort_close_icon"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="最新发布"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_13" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/write_line"
+                android:background="@color/color_eeeeee" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <include
+        android:id="@+id/layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        layout="@layout/custom_conversation_list_fragment_layout"/>
+
+    <View
+        android:id="@+id/line_view_1"
+        android:layout_below="@+id/layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e6e6e6"/>
+
+    <FrameLayout
+        android:id="@+id/conversation_list_layout"
+        android:layout_below="@+id/line_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

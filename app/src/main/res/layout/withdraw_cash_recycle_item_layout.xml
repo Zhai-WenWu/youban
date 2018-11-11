@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:paddingTop="6.5dp"
+    android:paddingBottom="6.5dp"
+    android:id="@+id/root_layout">
+
+
+    <TextView
+        android:id="@+id/money_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/shop_img"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13"
+        android:text="明细"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/time_text_view"/>
+
+    <TextView
+        android:id="@+id/time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_12"
+        android:text="0000-0-0 00:00"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_alignTop="@+id/money_text_view"
+        android:layout_alignBottom="@+id/money_text_view"
+        />
+
+</RelativeLayout>

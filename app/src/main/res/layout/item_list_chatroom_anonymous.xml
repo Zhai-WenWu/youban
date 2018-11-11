@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:padding="10dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_chatroom" />
+
+    <RelativeLayout
+        android:id="@+id/rl_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/iv_icon">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxEms="14"
+            android:maxLines="1"
+            android:text="聊天室主题"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_13" />
+
+
+        <ImageView
+            android:id="@+id/img_tag"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/tag_icon" />
+
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/img_tag"
+            android:text="标签"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_10" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/iv_lock_chatroom"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_alignBottom="@+id/tv_num_people"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_num_people"
+            android:paddingLeft="10dp"
+            android:paddingRight="13dp"
+            android:src="@drawable/lock_chatroom" />
+
+        <TextView
+            android:id="@+id/tv_num_people"
+            android:layout_width="45dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_round_23_stroke_ffee00_solid_6613140d"
+            android:gravity="center"
+            android:text="0人"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_10" />
+
+        <TextView
+            android:id="@+id/tv_city_school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/tv_num_people"
+            android:layout_below="@id/tv_num_people"
+            android:layout_marginTop="8.5dp"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_9" />
+    </RelativeLayout>
+</RelativeLayout>

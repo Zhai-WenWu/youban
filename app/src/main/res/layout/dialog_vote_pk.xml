@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/shape_round_10_solid_ffffff"
+        android:paddingBottom="20dp">
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/open_pk_title_text_view"
+            android:src="@drawable/pk_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/close_img_view"
+            android:src="@drawable/img_close_grey"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PK结束后才能查看结果，\n观战免费投票，或礼物\n100金币=1票"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_16"
+            android:layout_below="@+id/open_pk_title_text_view"
+            android:layout_marginTop="20dp"
+            android:id="@+id/pk_tip_text_view"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发起PK"
+            android:textColor="@color/color_ffda44"
+            android:textSize="@dimen/text_size_15"
+            android:gravity="center"
+            android:layout_below="@+id/pk_tip_text_view"
+            android:id="@+id/open_pk_text_view"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/pk_text_bg"
+            android:shadowColor="@color/color_025b77"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"/>
+
+        </RelativeLayout>
+
+</LinearLayout>

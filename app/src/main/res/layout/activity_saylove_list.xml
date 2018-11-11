@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:layout="@layout/fragment_title" />
+
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/refresh_layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_fragment">
+
+        <ListView
+            android:id="@+id/saylove_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/color_00000000"
+            android:dividerHeight="0dp"
+            android:listSelector="@color/color_00000000"
+            android:overScrollMode="never" />
+
+        <TextView
+            android:id="@+id/finish_view"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/saylove_list_view"
+            android:gravity="center"
+            android:text="已全部加载"
+            android:textColor="@color/color_000000"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/empty_view"
+            layout="@layout/empty_page_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/saylove_list_view"
+            android:visibility="visible" />
+
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+    <ImageView
+        android:id="@+id/publish_image_view"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:src="@mipmap/post_publish_icon" />
+
+    <include
+        android:id="@+id/send_comment_view"
+        layout="@layout/send_comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/tab_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dip"
+        android:layout_marginTop="11dp"
+        android:src="@mipmap/scrool_to_top_icon"
+        />
+
+
+</RelativeLayout>

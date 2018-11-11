@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <fragment
+        android:id="@+id/title_layout"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.ToolBarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_tool_bar_layout" />
+
+    <View
+        android:id="@+id/line_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title_layout"
+        android:background="@color/color_d3d3d3" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line_view_1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:gravity="center"
+                android:paddingTop="9dp"
+                android:text="圈子基本资料"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_15" />
+
+            <include
+                android:id="@+id/layout_view_1"
+                layout="@layout/fragment_create_association_stup1_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_all_no_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_ffffff"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/view_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="全匿名圈子"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/view_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_1"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/switch_no_name"
+                    android:text="在这里您可以隐藏身份，畅所欲言；
+所有人都可以匿名身份申请加入该圈子，创建者设定之后不能更改。"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_11" />
+
+                <Switch
+                    android:id="@+id/switch_no_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_below="@+id/view_1"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="45dp"
+                    android:switchMinWidth="45dp"
+                    android:textOff=""
+                    android:textOn=""
+                    android:thumb="@android:color/transparent"
+                    android:track="@drawable/switch_track" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_custom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/view_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="自定义圈子"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/view_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_5"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/switch_custom"
+                    android:text="在这里您可以选择匿名或非匿名发布内容；
+所有人都可加入该圈子，此圈子由创建者选择是否能匿名发布内容。"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_11" />
+
+                <Switch
+                    android:id="@+id/switch_custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_below="@+id/view_5"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="45dp"
+                    android:checked="true"
+                    android:switchMinWidth="45dp"
+                    android:textOff=""
+                    android:textOn=""
+                    android:thumb="@android:color/transparent"
+                    android:track="@drawable/switch_track" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_no_name_can_publish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_6"
+                    android:layout_marginTop="15dp"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="5.5dp"
+                    android:drawableStart="@drawable/selector_group_radiobutton"
+                    android:text="圈子成员可匿名发布"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_ffffff"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/view_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="创建匿名聊天室"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:id="@+id/view_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/view_8"
+                    android:layout_toStartOf="@+id/switch_creat_no_name_hoom"
+                    android:text="给自己的圈子创建匿名聊天室，可到“圈子详情、首页-聊天频道”进入聊天室，圈子内所有人都能以新的身份进入该聊天室畅聊～"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_11" />
+
+                <Switch
+                    android:id="@+id/switch_creat_no_name_hoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_below="@+id/view_8"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="45dp"
+                    android:switchMinWidth="45dp"
+                    android:textOff=""
+                    android:textOn=""
+                    android:thumb="@android:color/transparent"
+                    android:track="@drawable/switch_track" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/color_ffffff"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="权限设置"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_15" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_e6e6e6" />
+
+
+            <include
+                android:id="@+id/layout_view_2"
+                layout="@layout/fragment_create_association_stup3_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

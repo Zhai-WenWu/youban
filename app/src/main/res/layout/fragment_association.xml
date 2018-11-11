@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        style="@style/homeTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:fillViewport="false" />
+
+    <ImageView
+        android:id="@+id/search_img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/home_search_icon" />
+
+    <cn.bjhdltcdn.p2plive.widget.CustomViewPager
+        android:id="@+id/association_view_page"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabs"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

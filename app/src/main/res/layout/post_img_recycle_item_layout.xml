@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="115dp"
+    android:layout_height="115dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:scaleType="centerCrop" />
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image_num_tv"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/text_size_10"
+        android:drawableLeft="@mipmap/post_img_num_icon"
+        android:drawablePadding="4dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="0"
+        android:visibility="gone"
+        android:paddingLeft="7.5dp"
+        android:paddingRight="7.5dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/shape_round_18_solid_66333333"/>
+
+</RelativeLayout>

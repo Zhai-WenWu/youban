@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_ffffff"
+    android:id="@+id/root_view">
+
+    <!--<fragment-->
+        <!--android:id="@+id/title_fragment"-->
+        <!--android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--tools:layout="@layout/fragment_title"-->
+        <!--/>-->
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="49dp"
+        android:layout_below="@+id/title_fragment"
+        app:srlFooterTranslationViewId ="@+id/shop_detail_view_page"
+        >
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <cn.bjhdltcdn.p2plive.widget.CustomViewPager
+            android:id="@+id/shop_detail_view_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            app:elevation="0dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/AppFragment_CollapsingToolbarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:contentScrim="@color/color_ffffff"
+                >
+                <!--app:contentScrim="?attr/colorPrimary"-->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/banner_layout"
+                >
+
+
+                <fragment
+                    android:id="@+id/banner_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="cn.bjhdltcdn.p2plive.ui.fragment.HomeBannerFragment"
+                    />
+
+                <include
+                    android:id="@+id/shop_screen_view"
+                    layout="@layout/shop_detail_header_layout"
+                    android:visibility="visible"
+                    android:layout_below="@+id/banner_frame"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+
+
+
+            </RelativeLayout>
+
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/AppFragment_Toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/color_ffffff"
+                    app:layout_collapseMode="pin"
+                    app:contentInsetStart="0dp">
+
+                    <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                    <ImageView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/shop_detail_back_icon"
+                        android:id="@+id/back_img_view"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="店铺详情"
+                        android:textColor="@color/color_333333"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <ImageView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/shop_detail_more_icon"
+                        android:id="@+id/more_img_view"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"/>
+
+                        <ImageView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/shop_detail_share_icon"
+                            android:id="@+id/share_img_view"
+                            android:layout_toLeftOf="@+id/more_img_view"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"/>
+
+                        <View
+                            android:id="@+id/title_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/color_b3e6e6e6"
+                            />
+                    </RelativeLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+                <!--<fragment-->
+                    <!--android:id="@+id/toolbar_fragment"-->
+                    <!--android:name="cn.bjhdltcdn.p2plive.ui.fragment.ToolBarFragment"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="44dp"-->
+                    <!--tools:layout="@layout/fragment_tool_bar_layout"-->
+                    <!--app:layout_collapseMode="pin"/>-->
+
+
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                style="@style/shopDetailTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="exitUntilCollapsed|enterAlways|enterAlwaysCollapsed"
+                />
+
+        </android.support.design.widget.AppBarLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <ViewStub
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:id="@+id/seller_operation_layout"
+        android:layout_alignParentBottom="true"
+        android:layout="@layout/shop_detail_bottom_seller_layout" />
+
+    <ViewStub
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:id="@+id/buyer_operation_layout"
+        android:layout_alignParentBottom="true"
+        android:layout="@layout/shop_detail_bottom_buyer_layout" />
+
+    <include
+        android:id="@+id/send_comment_view"
+        layout="@layout/send_goods_comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

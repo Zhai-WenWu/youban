@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f4f4f4"
+    android:focusableInTouchMode="true">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_d3d3d3" />
+
+    <RelativeLayout
+        android:id="@+id/rela_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/color_ffffff"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="7.5dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="7.5dp">
+
+
+            <EditText
+                android:id="@+id/reply_edit_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:hint="说点什么吧...."
+                android:maxHeight="100dp"
+                android:maxLength="500"
+                android:minHeight="35dp"
+                android:padding="5dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_cccccc"
+                android:textSize="@dimen/text_size_13"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/send_view"
+                android:background="@drawable/shape_round_10_solid_f4f4f4"/>
+
+        <TextView
+            android:id="@+id/send_view"
+            android:layout_width="55dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_round_10_solid_fff69f"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/left_recycle_view"
+        android:layout_width="match_parent"
+        android:background="@color/color_ffffff"
+        android:layout_height="45.5dp"/>
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="6.5dp"
+        android:layout_below="@+id/left_recycle_view"
+        android:background="@color/color_e6e6e6" />
+
+    <include
+        android:id="@+id/text_view_2"
+        android:layout_below="@+id/line_view"
+        layout="@layout/text_view_type_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/line_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/text_view_2"
+        android:background="@color/color_e6e6e6" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/right_recycle_view"
+        android:layout_above="@+id/stup2_next_btn_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line_view_1"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/stup2_next_btn_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="下一步"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="gone" />
+
+</RelativeLayout>

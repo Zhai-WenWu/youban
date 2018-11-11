@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/radio_group"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:layout_marginTop="7dp"
+    android:background="@color/color_fafafa"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/rb_day"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:text="当日接单(5)"
+        android:textColor="@drawable/selector_tab_text_color" />
+
+    <RadioButton
+        android:id="@+id/rb_month"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:button="@null"
+        android:gravity="center"
+        android:text="当日接单(5)"
+        android:textColor="@drawable/selector_tab_text_color" />
+
+    <RadioButton
+        android:id="@+id/rb_all"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:button="@null"
+        android:gravity="center"
+        android:text="总计(5)"
+        android:textColor="@drawable/selector_tab_text_color" />
+
+</RadioGroup>

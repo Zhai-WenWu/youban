@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_ffffff">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        tools:layout="@layout/fragment_title" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_fragment"
+        android:layout_above="@+id/ok_btn_view">
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:paddingTop="8.5dp">
+
+            <TextView
+                android:id="@+id/tip_view_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_11"
+                android:text="广告图："
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/tip_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_11"
+                android:text="（您的第一张图会默认为商品封面）"
+                android:layout_toRightOf="@+id/tip_view_1"
+                android:layout_alignTop="@+id/tip_view_1"
+                android:layout_alignBottom="@+id/tip_view_1"
+                android:gravity="center_vertical"/>
+
+
+
+            <FrameLayout
+                android:id="@+id/imag_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tip_view"
+                android:layout_marginTop="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商品名称："
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"
+                android:layout_below="@+id/imag_fragment"
+                android:id="@+id/goods_name_text_view"
+                android:layout_marginTop="23dp"
+                android:layout_alignLeft="@+id/tip_view_1"
+                />
+
+                <EditText
+                    android:id="@+id/goods_name_edit_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="center|left"
+                    android:hint="请输入商品标题-品牌"
+                    android:textColorHint="@color/color_999999"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14"
+                    android:layout_below="@+id/imag_fragment"
+                    android:layout_marginTop="23dp"
+                    android:maxLength="35"
+                    android:layout_toRightOf="@+id/goods_name_text_view"
+                    />
+
+                <View
+                    android:id="@+id/line_view_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/goods_name_edit_view"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/color_e6e6e6" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商品价格："
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"
+                android:layout_below="@+id/line_view_1"
+                android:id="@+id/goods_price_text_view"
+                android:layout_marginTop="16dp"
+                android:layout_alignLeft="@+id/tip_view_1"/>
+
+            <EditText
+                android:id="@+id/goods_price_edit_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center|left"
+                android:hint="请输入商品售价"
+                android:inputType="numberDecimal"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_999999"
+                android:textSize="@dimen/text_size_13"
+                android:layout_toRightOf="@+id/goods_price_text_view"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/line_view_1"/>
+
+            <View
+                android:id="@+id/line_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/goods_price_edit_view"
+                android:layout_marginTop="12dp"
+                android:background="@color/color_e6e6e6"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="库存数量："
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"
+                android:layout_below="@+id/line_view_2"
+                android:id="@+id/goods_stock_text_view"
+                android:layout_marginTop="16dp"
+                android:layout_alignLeft="@+id/tip_view_1"/>
+
+
+
+            <EditText
+                android:id="@+id/goods_stock_edit_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center|left"
+                android:hint="请输入库存数量"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_999999"
+                android:textSize="@dimen/text_size_13"
+                android:layout_toRightOf="@+id/goods_stock_text_view"
+                android:layout_below="@+id/line_view_2"
+                android:layout_marginTop="16dp"
+                android:inputType="number"/>
+
+            <View
+                android:id="@+id/line_view_8"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/goods_stock_text_view"
+                android:layout_marginTop="12dp"
+                android:background="@color/color_e6e6e6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商品详情："
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_15"
+                android:layout_below="@+id/line_view_8"
+                android:id="@+id/spxq_text_view"
+                android:layout_marginTop="14dp"
+                android:layout_alignLeft="@id/tip_view_1"/>
+
+            <EditText
+                android:id="@+id/goods_destribe_edit_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="140dp"
+                android:textColor="@color/color_333333"
+                android:hint="描述一下商品的细节..."
+                android:textColorHint="@color/color_aaaaaa"
+                android:textSize="@dimen/text_size_12"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/shape_round_18_stroke_dddddd"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="30dp"
+                android:maxLength="500"
+                android:layout_below="@+id/spxq_text_view"
+                android:layout_alignLeft="@id/tip_view_1"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_num_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:text="0/500"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_11"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@+id/goods_destribe_edit_view"
+                android:layout_marginBottom="10dp"/>
+
+            <View
+                android:id="@+id/line_view_5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@+id/goods_destribe_edit_view"
+                android:layout_marginTop="20dp"
+                android:background="@color/color_f7f7f7"/>
+
+
+            <TextView
+                android:id="@+id/xt_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_view_5"
+                android:text="以下选填"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="visible"
+                android:layout_marginTop="6dp"
+                android:layout_centerHorizontal="true"/>
+
+            <View
+                android:id="@+id/line_view_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_stroke_d3d3d3_line"
+                android:layout_toLeftOf="@+id/xt_text_view"
+                android:layout_alignTop="@+id/xt_text_view"
+                android:layout_alignBottom="@+id/xt_text_view"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="85dp"/>
+
+            <View
+                android:id="@+id/line_view_7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_stroke_d3d3d3_line"
+                android:layout_toRightOf="@+id/xt_text_view"
+                android:layout_alignTop="@+id/xt_text_view"
+                android:layout_alignBottom="@+id/xt_text_view"
+                android:layout_marginRight="85dp"
+                android:layout_marginLeft="18dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="折扣活动："
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"
+                android:id="@+id/goods_discount_text_view"
+                android:layout_below="@+id/xt_text_view"
+                android:layout_marginTop="16dp"
+                android:layout_alignLeft="@id/tip_view_1"/>
+
+            <EditText
+                android:id="@+id/goods_discount_edit_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center|left"
+                android:hint="如：5折"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_13"
+                android:layout_toRightOf="@+id/goods_discount_text_view"
+                android:textColorHint="@color/color_999999"
+                android:inputType="numberDecimal"
+                android:maxLength = "3"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/xt_text_view"/>
+
+            <View
+                android:id="@+id/line_view_3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/goods_discount_text_view"
+                android:layout_marginTop="12dp"
+                android:background="@color/color_e6e6e6"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="折  后  价："
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14"
+                android:layout_below="@+id/line_view_3"
+                android:id="@+id/goods_discount_price_text_view"
+                android:layout_marginTop="16dp"
+                android:layout_alignLeft="@id/tip_view_1"/>
+
+            <EditText
+                android:id="@+id/goods_discount_price_edit_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center|left"
+                android:hint=""
+                android:textColorHint="@color/color_999999"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_13"
+                android:layout_toRightOf="@+id/goods_discount_price_text_view"
+                android:layout_below="@+id/line_view_3"
+                android:layout_marginTop="16dp"
+                android:enabled="false"/>
+
+                <View
+                    android:id="@+id/line_view_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/goods_discount_price_edit_view"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/color_e6e6e6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="商品详情图片："
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14"
+                    android:layout_below="@+id/line_view_4"
+                    android:id="@+id/spxqtp_text_view"
+                    android:layout_marginTop="12dp"
+                    android:layout_alignLeft="@id/tip_view_1"/>
+
+                <FrameLayout
+                    android:id="@+id/imag_detail_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spxqtp_text_view"
+                    android:layout_marginTop="7.5dp"
+                    android:layout_alignLeft="@id/tip_view_1"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="备注：可上传长图"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_10"
+                    android:layout_below="@+id/imag_detail_fragment"
+                    android:id="@+id/spxqtp_tip_text_view"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignLeft="@id/tip_view_1"/>
+
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/ok_btn_view"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="47.5dp"
+        android:layout_marginRight="47.5dp"
+        android:text=""
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_16"
+        android:visibility="visible"
+        android:background="@drawable/shape_round_10_solid_ffee00"/>
+
+</RelativeLayout>

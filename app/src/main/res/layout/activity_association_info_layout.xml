@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff">
+
+    <fragment
+        android:id="@+id/title_layout"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.ToolBarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_tool_bar_layout" />
+
+    <View
+        android:id="@+id/line_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title_layout"
+        android:background="@color/color_d3d3d3" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line_view_1"
+        android:background="@color/color_ffffff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            tools:context="cn.bjhdltcdn.p2plive.ui.activity.AssociationInfoActivity">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/nicke_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/id_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nicke_text_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_13" />
+
+
+            <TextView
+                android:id="@+id/layout_view_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_text_view"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="圈子所属类型："
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/layout_view_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_text_view"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/layout_view_6"
+                android:text="体育运动"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/layout_view_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_text_view"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/layout_view_7"
+                android:text=" - 篮球"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_13" />
+
+            <View
+                android:id="@+id/line_view_6"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/layout_view_6"
+                android:background="@color/color_e6e6e6" />
+
+            <TextView
+                android:id="@+id/layout_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_view_6"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="圈子简介"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/desc_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_view"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:text="恢复活动即将来解决，分手的话放假倒计时，返回看哈哈好放假倒计时开发，放假就是回家后放假，都快睡觉了减肥，对数据库技术放假"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_13" />
+
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="6.5dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/desc_text_view"
+                android:background="@color/color_e6e6e6" />
+
+
+            <TextView
+                android:id="@+id/member_text_tips_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/view_line"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="圈子成员"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_15" />
+
+            <TextView
+                android:id="@+id/member_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/view_line"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/member_text_tips_view"
+                android:text="(200人）"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_12" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/member_text_tips_view"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp" />
+
+            <ImageView
+                android:id="@+id/arrow_right_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/recycle_view"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/active_arrow_icon" />
+
+
+            <include
+                android:id="@+id/association_info_permissions_view"
+                layout="@layout/association_info_permissions_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/recycle_view"
+                android:layout_marginTop="14.5dp"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/view_line_2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/association_info_permissions_view"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_e6e6e6" />
+
+            <RelativeLayout
+                android:id="@+id/layout_view_9"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/view_line_2"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="圈子黑名单"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@mipmap/active_arrow_icon" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_line_5"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/layout_view_9"
+                android:background="@color/color_e6e6e6" />
+
+
+            <TextView
+                android:id="@+id/layout_view_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/view_line_5"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:text="我在本圈的活跃等级"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14" />
+
+            <ImageView
+                android:id="@+id/img_level"
+                android:layout_width="30dp"
+                android:layout_height="15dp"
+                android:layout_alignTop="@+id/layout_view_2"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/layout_view_2"
+                android:src="@mipmap/level_one" />
+
+            <View
+                android:id="@+id/line_view_5"
+                android:layout_width="match_parent"
+                android:layout_height="6.5dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/layout_view_2"
+                android:background="@color/color_e6e6e6" />
+
+            <RelativeLayout
+                android:id="@+id/tv_no_disturb2_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/line_view_5"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_no_disturb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="展示在我的资料中"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_below="@+id/tv_no_disturb2"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:text="关闭后，别人查看我的资料时，将看不到我加入了本圈子"
+                    android:textColor="@color/color_999999"
+                    android:textSize="@dimen/text_size_11" />
+
+                <Switch
+                    android:id="@+id/img_no_disturb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:switchMinWidth="45dp"
+                    android:textOff=""
+                    android:textOn=""
+                    android:thumb="@android:color/transparent"
+                    android:track="@drawable/switch_track" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="6.5dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/tv_no_disturb2_view"
+                android:background="@color/color_e6e6e6" />
+
+
+            <RelativeLayout
+                android:id="@+id/layout_view_4"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/line_view_2"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="分享该圈子"
+                    android:textColor="@color/color_333333"
+                    android:textSize="@dimen/text_size_15" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@mipmap/active_arrow_icon" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line_view_8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/layout_view_4"
+                android:background="@color/color_e6e6e6" />
+
+            <View
+                android:id="@+id/line_view_10"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/line_view_8" />
+
+            <Button
+                android:id="@+id/logout_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_view_10"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_round_10_stroke_333333_solid_ffffff"
+                android:text="退出圈子"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_16"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>
+

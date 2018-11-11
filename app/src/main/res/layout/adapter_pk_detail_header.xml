@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/pk_detail_bg"
+    android:paddingBottom="18dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/tv_starter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="原创首发: "
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/text_size_12" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tv_starter"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/color_ffb700"
+        android:textSize="@dimen/text_size_12" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/tv_starter"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/icon_audio" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_add_friend"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_below="@+id/tv_starter"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="66dp"
+        android:src="@drawable/add_focus" />
+
+    <TextView
+        android:id="@+id/tv_title_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/text_size_12" />
+
+    <LinearLayout
+        android:id="@+id/ll_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/tv_title_detail"
+        android:layout_below="@+id/tv_title_detail"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_ffffff"
+            android:text="内容发布在：" />
+
+        <cn.bjhdltcdn.p2plive.widget.tagview.TagContainerLayout
+            android:id="@+id/tag_container_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:container_background_color="@color/transparent"
+            app:container_border_color="@color/transparent"
+            app:container_enable_drag="false"
+            app:horizontal_interval="20dp"
+            app:tag_background_color="@color/color_f4f4f4"
+            app:tag_border_color="@color/color_00000000"
+            app:tag_border_width="0dp"
+            app:tag_clickable="true"
+            app:tag_enable_cross="false"
+            app:tag_horizontal_padding="13dp"
+            app:tag_text_color="@color/color_333333"
+            app:tag_theme="none"
+            app:vertical_interval="10dp" />
+    </LinearLayout>
+
+</RelativeLayout>

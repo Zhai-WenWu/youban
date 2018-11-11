@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="8dp"/>
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/active_organizer_icon"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/active_organizer_img"/>
+
+    <ImageView android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@mipmap/girl_active_icon"
+        android:layout_alignRight="@+id/user_image"
+        android:layout_alignBottom="@+id/user_image"
+        android:id="@+id/sex_img"
+        android:visibility="visible"
+        android:layout_marginRight="2dp"/>
+
+</RelativeLayout>

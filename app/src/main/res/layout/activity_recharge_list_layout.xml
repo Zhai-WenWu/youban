@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fafafa">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        tools:layout="@layout/fragment_title" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recharge_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_fragment"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recharge_recycle_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="23dp"
+        android:text="大额充值请到个人中心，联系客服充值"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_13" />
+
+</RelativeLayout>

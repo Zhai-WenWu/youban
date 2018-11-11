@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+        <View android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/root_layout"
+            android:layout_alignTop="@+id/from_baseuser_name_textview"
+            android:layout_alignBottom="@+id/from_baseuser_name_textview"
+            />
+
+
+        <TextView
+            android:id="@+id/from_baseuser_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:textColor="@color/color_151515"
+            android:textSize="@dimen/text_size_13"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="回复"
+            android:textColor="@color/color_151515"
+            android:textSize="@dimen/text_size_13"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/to_baseuser_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称："
+            android:textColor="@color/color_536895"
+            android:textSize="@dimen/text_size_13"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/comment_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="回复内容"
+            android:textColor="@color/color_151515"
+            android:textSize="@dimen/text_size_13"
+            android:visibility="gone"/>
+
+
+</RelativeLayout>

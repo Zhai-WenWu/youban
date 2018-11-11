@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_333333">
+
+    <RelativeLayout
+        android:id="@+id/rela_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rela_time"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/video_top_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/shape_yellow_pop_num" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="0s"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_record"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/video_bottom_bg"
+        >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7.5dp"
+            android:text="点击拍摄"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/img_record"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17" />
+
+        <ImageView
+            android:id="@+id/img_record"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="78.5dp"
+            android:layout_marginRight="87.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_moments_video_record"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/img_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_record"
+            android:background="@drawable/video_local_switch" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_cancel_ovl"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/shape_oval_332e2e2e"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18" />
+
+        <RelativeLayout
+            android:id="@+id/rela_ok"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/shape_oval_332e2e2e">
+
+            <ImageView
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/img_service_s" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

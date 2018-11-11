@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f4f4f4"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/title_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/title_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="37.5dp"
+            android:layout_marginRight="37.5dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="任务副本完 车 "
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_25" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_text_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="37.5dp"
+            android:layout_marginRight="37.5dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:text="@string/str_shcool_org_tips"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/left_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/back_icon_white"
+            android:gravity="center" />
+
+
+        <ImageView
+            android:id="@+id/right_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/asso_right_icon"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@color/color_333333" />
+
+        <TextView
+            android:id="@+id/nicke_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image_view"
+            android:layout_marginTop="-5dp"
+            android:layout_toRightOf="@+id/image_view"
+            android:ellipsize="end"
+            android:maxEms="9"
+            android:singleLine="true"
+            android:text="任务副本完 车 任务副本完 车务副本务副本 "
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/id_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nicke_text_view"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/image_view"
+            android:text="ID:1234 "
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_12" />
+
+
+        <TextView
+            android:id="@+id/member_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_text_view"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/image_view"
+            android:text="成员 1234 "
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_12" />
+
+
+        <TextView
+            android:id="@+id/post_count_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/member_text_view"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/image_view"
+            android:text="帖子 1234 "
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/tv_anonymous_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_view"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_view_3"
+            android:text="本圈子为匿名圈子，不显示用户头像和昵称，在此圈子请注意您的言行措辞。"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_10"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/desc_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_anonymous_text"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_view_3"
+            android:text="本圈内帖子、成员信息，仅圈友可见本圈内帖子、成员信息，仅圈友可见本圈内帖子、成员信息，仅圈友可见 "
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_10"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_view_3"
+            android:layout_width="55dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/image_view"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="-5dp"
+            android:background="@drawable/shape_round_10_solid_ffee00"
+            android:text="分享圈子"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_12"
+            android:visibility="visible" />
+
+
+        <Button
+            android:id="@+id/btn_view_1"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/nicke_text_view"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_round_10_solid_ffee00"
+            android:text="加入"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_12"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/add_image_view"
+            android:paddingLeft="5dp"
+            android:text="【圈子聊天群组】"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_15"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/group_desc_view"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@+id/line_view_1"
+            android:layout_toRightOf="@+id/group_text_view"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:maxLength="9"
+            android:text="五道口骑行社大群"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/btn_view_2"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/line_view_1"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_round_10_solid_ffee00"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="加入"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_12" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_view_3"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/layout_view_4"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginRight="17.5dp"
+            android:background="@drawable/shape_round_10_solid_ffee00"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/add_image_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="12dp"
+                android:src="@mipmap/add2_icon" />
+
+            <TextView
+                android:id="@+id/text_view_1"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_toRightOf="@+id/add_image_view"
+                android:gravity="center"
+                android:text="创建圈子聊天群组"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_16" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_circle_name_and_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/iv_chat_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/random_icon" />
+
+        <TextView
+            android:id="@+id/tv_circle_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="圈子名称"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_13" />
+
+        <ImageView
+            android:id="@+id/iv_lock_chatroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="14dp"
+            android:src="@drawable/lock_chatroom" />
+
+        <TextView
+            android:id="@+id/tv_circle_online_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/shape_round_23_solid_9913140d_stroke_ffee00"
+            android:paddingBottom="3dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="3dp"
+            android:text="100人"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/text_size_10" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+        <TextView
+            android:id="@+id/left_btn_view"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_20_solid_ffee00"
+            android:gravity="center"
+            android:text="全部"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/middle_btn_view"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_20_stroke_999999_solid_ffffff"
+            android:gravity="center"
+            android:text="原创视频"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_14" />
+
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/right_btn_view"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_20_stroke_999999_solid_ffffff"
+            android:gravity="center"
+            android:text="活动"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_14" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

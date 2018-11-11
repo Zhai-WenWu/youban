@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@color/color_cccccc"
+        android:scaleType="centerCrop"
+        android:id="@+id/first_label_image_view"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/first_label_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/first_label_image_view"
+        android:layout_marginLeft="10dp"
+        android:text="一级类型"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_14"
+        android:layout_alignTop="@+id/first_label_image_view"
+        android:layout_alignBottom="@+id/first_label_image_view"
+        android:gravity="center_vertical"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/label_second_recycle_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_label_image_view"
+        android:layout_marginTop="18.5dp"
+        android:layout_marginLeft="15dp"
+        android:layoutDirection="ltr"/>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/label_second_recycle_view"
+        android:background="@color/color_f7f7f7"
+        android:id="@+id/divider_line"/>
+
+
+</RelativeLayout>

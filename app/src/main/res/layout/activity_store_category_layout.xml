@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        tools:layout="@layout/fragment_title" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_fragment"
+        android:layout_above="@+id/ok_text_view"
+        android:id="@+id/scrooll_view">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:text="您可以开哪些类型的店铺～"
+                android:textColor="@color/color_507daf"
+                android:textSize="@dimen/text_size_12"
+                android:id="@+id/tip_text_view"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="7.5dp"
+                android:background="@color/color_e6e6e6"
+                android:id="@+id/line_view"
+                android:layout_below="@+id/tip_text_view"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/label_first_recycle_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_view"
+                android:nestedScrollingEnabled="false"/>
+
+            <CheckBox android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_below="@+id/label_first_recycle_view"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/apply_for_shop_rules_radiobutton"
+                android:drawablePadding="11dp"
+                android:id="@+id/rules_checkbox"
+                android:layout_marginTop="12.5dp"
+                android:textSize="@dimen/text_size_12"
+                android:textColor="@color/color_666666"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/rules_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已阅读并执行《规章制度》"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/text_size_12"
+                android:layout_toRightOf="@+id/rules_checkbox"
+                android:layout_alignTop="@+id/rules_checkbox"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="下一步"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_16"
+                android:layout_below="@+id/rules_view"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_round_10_solid_ffee00"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ok_text_view"/>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

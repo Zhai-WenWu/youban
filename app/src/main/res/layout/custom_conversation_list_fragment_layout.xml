@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:src="@mipmap/notify_icon" />
+
+        <TextView
+            android:id="@+id/nicke_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:gravity="center|left"
+            android:layout_weight="1"
+            android:text="互动消息"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:id="@+id/arrow_right_view"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:visibility="visible"
+            android:src="@mipmap/active_arrow_icon" />
+
+        <TextView
+            android:id="@+id/name_pop_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_red_pop_num"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

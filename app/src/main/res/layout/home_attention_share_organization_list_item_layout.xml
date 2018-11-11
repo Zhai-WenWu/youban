@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_f4f4f4"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/share_userinfo_layout"
+        layout="@layout/share_list_userinfo_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <include
+        android:id="@+id/share_layout"
+        layout="@layout/fragment_organization_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/delete_layout"
+        layout="@layout/layout_share_info_delete_layout"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_fafafa">
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/delete_icon"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/delete_share_img"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

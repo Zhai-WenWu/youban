@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fafafa"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="44dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:text="为了您的账户安全，请先绑定手机号码"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_14" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="104.5dp">
+
+        <EditText
+            android:id="@+id/edit_phone"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:layout_alignBottom="@+id/tv_getcode"
+            android:layout_marginTop="30dp"
+            android:layout_toLeftOf="@id/tv_getcode"
+            android:background="@null"
+            android:hint="请输入手机号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_cccccc"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_getcode"
+            android:layout_width="65dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_round_10_stroke_999999"
+            android:gravity="center"
+            android:text="获取验证码"
+            android:textColor="@color/color_b7b7b7"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="7.5dp"
+        android:background="@color/color_cccccc" />
+
+    <EditText
+        android:id="@+id/edit_code"
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="36dp"
+        android:background="@null"
+        android:hint="请输入短信验证码"
+        android:inputType="number"
+        android:maxLength="11"
+        android:textColor="@color/color_333333"
+        android:textColorHint="@color/color_cccccc"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="7.5dp"
+        android:background="@color/color_cccccc" />
+
+
+    <TextView
+        android:id="@+id/tv_bind"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="47.5dp"
+        android:layout_marginRight="47.5dp"
+        android:layout_marginTop="63dp"
+        android:background="@drawable/shape_round_10_solid_e6e6e6"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

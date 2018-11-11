@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:id="@id/root_layout">
+
+    <TextView
+        android:id="@+id/left_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        android:text="分享转发了"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="12dp"/>
+
+        <TextView
+            android:id="@+id/form_user_nickname_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="120dp"
+            android:singleLine="true"
+            android:text="名称"
+            android:textColor="@color/color_576b95"
+            android:textSize="@dimen/text_size_13"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_toRightOf="@+id/left_tip"/>
+
+    <TextView
+        android:id="@+id/right_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        android:text="的聊天频道"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_toRightOf="@+id/form_user_nickname_text"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tag_layout"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        android:visibility="gone"
+        android:layout_below="@+id/form_user_nickname_text">
+
+        <ImageView
+            android:id="@+id/tag_image_view"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/room_label_icon"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tag_text_view"
+            android:layout_toRightOf="@+id/tag_image_view"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_10"
+            android:layout_marginLeft="8dp"
+            android:text="标签列表"
+            android:singleLine="true"/>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/room_image_view"
+        android:layout_below="@+id/tag_layout"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/room_name_view"
+        android:layout_alignBottom="@+id/room_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        android:text="视频直播主题"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/home_list_title_bg"/>
+
+
+</RelativeLayout>

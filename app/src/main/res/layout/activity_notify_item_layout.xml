@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tubb.smrv.SwipeHorizontalMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:id="@+id/smContentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_ffffff">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_image_view"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_margin="10dp"
+            android:src="@color/color_333333"/>
+
+        <TextView
+            android:id="@+id/nicke_text_view"
+            android:layout_toRightOf="@+id/circle_image_view"
+            android:layout_alignTop="@+id/circle_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:gravity="center_vertical"
+            android:text="昵称"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/color_666666"/>
+
+        <TextView
+            android:id="@+id/timer_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/circle_image_view"
+            android:layout_marginRight="10dp"
+            android:text="下午6:00"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="@color/color_999999"/>
+
+        <TextView
+            android:id="@+id/content_view"
+            android:layout_below="@+id/nicke_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="参加了你组织的“本周末立水桥线下约饭大家一起品尝美食” 活动"
+            android:textSize="@dimen/text_size_13"
+            android:textColor="@color/color_333333"/>
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/smMenuViewRight"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="@color/color_fb0303"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14" />
+
+</com.tubb.smrv.SwipeHorizontalMenuLayout>
+
+

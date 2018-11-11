@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_fafafa"
+    android:paddingBottom="10dp">
+
+    <View android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:id="@+id/top_header_view"
+        android:visibility="gone"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_round_18_solid_ffffff"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:paddingBottom="12dp"
+        android:layout_below="@+id/top_header_view">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:riv_border_color="#000000"
+        app:riv_border_width="0dp"
+        app:riv_corner_radius="2dp"
+        app:riv_mutate_background="true"
+        app:riv_oval="false"
+        app:riv_tile_mode="clamp"
+        android:id="@+id/shop_img"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/error_bg"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/sm_img"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/shop_real_name_icon"
+        android:layout_alignTop="@+id/shop_img"
+        android:layout_alignRight="@+id/shop_img"
+        />
+
+
+    <TextView
+        android:id="@+id/shop_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:maxWidth="180dp"
+        android:layout_marginLeft="11.5dp"
+        android:layout_marginTop="16.5dp"
+        android:layout_toRightOf="@+id/shop_img"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_12"
+        android:text="店铺名称"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/nearby_user_num_text"
+        />
+
+        <TextView
+            android:id="@+id/user_school_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_below="@+id/shop_name_text"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_10"
+            android:text="大学名称"
+            android:layout_marginTop="1.5dp"
+            android:layout_toLeftOf="@+id/in_text_view"
+            android:layout_marginRight="10dp"
+            android:layout_alignLeft="@+id/shop_name_text"/>
+
+    <TextView
+        android:id="@+id/in_text_view"
+        android:layout_width="50dp"
+        android:layout_height="24dp"
+        android:gravity="center"
+        android:textColor="@color/color_ffb700"
+        android:textSize="@dimen/text_size_12"
+        android:text="进店"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_round_40_stroke_ffb700"/>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="106dp"
+            android:layout_below="@+id/shop_img"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/goods_layout"
+            android:orientation="horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:riv_border_color="#000000"
+                app:riv_border_width="0dp"
+                app:riv_corner_radius="10dp"
+                app:riv_mutate_background="true"
+                app:riv_oval="false"
+                app:riv_tile_mode="clamp"
+                android:id="@+id/goods_one_img"
+                android:src="@mipmap/error_bg"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"/>
+
+            <View android:layout_width="9dp"
+                android:layout_height="match_parent"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:riv_border_color="#000000"
+                app:riv_border_width="0dp"
+                app:riv_corner_radius="10dp"
+                app:riv_mutate_background="true"
+                app:riv_oval="false"
+                app:riv_tile_mode="clamp"
+                android:id="@+id/goods_two_img"
+                android:src="@mipmap/error_bg"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"/>
+
+            <View android:layout_width="9dp"
+                android:layout_height="match_parent"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:riv_border_color="#000000"
+                app:riv_border_width="0dp"
+                app:riv_corner_radius="10dp"
+                app:riv_mutate_background="true"
+                app:riv_oval="false"
+                app:riv_tile_mode="clamp"
+                android:id="@+id/goods_three_img"
+                android:src="@mipmap/error_bg"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goods_layout"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="10dp"
+        android:layoutDirection="ltr"/>
+
+
+
+    <TextView
+        android:id="@+id/shop_location_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/color_4d67b1"
+        android:textSize="@dimen/text_size_12"
+        android:text="海淀区"
+        android:layout_below="@+id/recycler_category"
+        android:layout_marginTop="2dp"
+        android:drawableLeft="@drawable/location_icon_post"
+        android:drawablePadding="6.5dp"/>
+
+
+        <TextView
+            android:id="@+id/shop_distance_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:layout_alignTop="@+id/shop_location_text_view"
+            android:layout_alignBottom="@+id/shop_location_text_view"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_10"
+            android:text="0km"
+            android:layout_toRightOf="@+id/shop_location_text_view"
+            android:layout_marginLeft="9.5dp"/>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

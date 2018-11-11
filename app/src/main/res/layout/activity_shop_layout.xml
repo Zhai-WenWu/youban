@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_ffffff">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        tools:layout="@layout/fragment_title" />
+
+    <EditText android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="6.5dp"
+        android:paddingBottom="6.5dp"
+        android:layout_below="@+id/title_fragment"
+        android:id="@+id/search_edittext"
+        android:background="@drawable/shape_round_10_solid_f4f4f4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toLeftOf="@+id/search_textview"
+        android:drawableLeft="@mipmap/home_search_icon"
+        android:drawablePadding="7dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="40dp"
+        android:hint="请输入店铺名称"
+        android:textColorHint="@color/color_999999"
+        android:textSize="@dimen/text_size_13"
+        android:textColor="@color/color_333333"
+        android:singleLine="true"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_edittext"
+        app:srlFooterTranslationViewId="@+id/data_view">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll"
+                android:id="@+id/banner_layout">
+
+            <fragment
+                android:id="@+id/banner_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="cn.bjhdltcdn.p2plive.ui.fragment.HomeBannerFragment"
+                />
+
+
+            </RelativeLayout>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/color_ffffff"
+                android:id="@+id/view_1"
+                app:layout_scrollFlags="exitUntilCollapsed|enterAlways|enterAlwaysCollapsed"/>
+
+            <include
+                android:id="@+id/shop_screen_view"
+                layout="@layout/shop_screen_label_layout"
+                android:visibility="gone"
+                android:layout_below="@+id/banner_layout"
+                android:layout_height="45dp"
+                android:layout_width="match_parent"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="exitUntilCollapsed|enterAlways|enterAlwaysCollapsed"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/data_view">
+
+                <!--<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:visibility="visible"-->
+                    <!--android:id="@+id/nest_scrollView">-->
+                    <include
+                        android:id="@+id/empty_view"
+                        layout="@layout/empty_layout"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                <!--</android.support.v4.widget.NestedScrollView>-->
+
+                <TextView android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/empty_list_text_view"
+                    android:text="当前没有符合的商家，为您推荐相关店铺"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/color_999999"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="12.5dp"
+                    android:paddingRight="12.5dp"
+                    android:paddingBottom="11.5dp"
+                    android:visibility="gone"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/shop_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:layout_below="@+id/empty_list_text_view"/>
+
+
+            </RelativeLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

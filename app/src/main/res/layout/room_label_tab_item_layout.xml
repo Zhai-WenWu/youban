@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <CheckBox android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="标签"
+        android:textSize="@dimen/text_size_12"
+        android:id="@+id/tv_label"
+        android:textColor="@drawable/selector_textcolor_room_tab"
+        android:button="@null"
+        android:checked="false"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

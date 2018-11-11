@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_33333333"
+    android:gravity="bottom"
+    android:paddingBottom="15dp"
+    android:paddingLeft="17dp"
+    android:paddingRight="17dp">
+
+    <LinearLayout
+        android:id="@+id/layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_round_8_solid_ffffff"
+        android:showDividers="middle"
+        android:divider="@drawable/shape_viewgroup_divider"
+        android:orientation="vertical">
+
+        <!--<TextView
+            android:id="@+id/layout_view_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="11.5dp"
+            android:paddingTop="11.5dp"
+            android:visibility="visible"
+            android:text="评论"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_16" />
+
+        <View
+            android:id="@+id/line_view_1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/color_e6e6e6" />
+
+        <TextView
+            android:id="@+id/layout_view_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="11.5dp"
+            android:paddingTop="11.5dp"
+            android:visibility="gone"
+            android:text="匿名评论"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_16" />
+
+        <View
+            android:id="@+id/line_view_2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/color_e6e6e6" />
+
+        <TextView
+            android:id="@+id/layout_view_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="11.5dp"
+            android:paddingTop="11.5dp"
+            android:visibility="gone"
+            android:text="举报"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_16" />
+
+        <View
+            android:id="@+id/line_view_3"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/color_e6e6e6" />
+
+        <TextView
+            android:id="@+id/layout_view_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="11.5dp"
+            android:paddingTop="11.5dp"
+            android:visibility="gone"
+            android:text="删除"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_16" />
+
+        <View
+            android:id="@+id/line_view_4"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/color_e6e6e6" />
+
+        <TextView
+            android:id="@+id/layout_view_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="11.5dp"
+            android:paddingTop="11.5dp"
+            android:text="置顶"
+            android:visibility="gone"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_16" />
+
+        <View
+            android:id="@+id/line_view_5"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/color_e6e6e6" />
+
+        <TextView
+            android:id="@+id/layout_view_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="11.5dp"
+            android:paddingTop="11.5dp"
+            android:visibility="gone"
+            android:text="取消"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_16" />
+
+
+        <View
+            android:id="@+id/line_view_6"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/color_e6e6e6" />
+
+        <TextView
+            android:id="@+id/layout_view_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="11.5dp"
+            android:paddingTop="11.5dp"
+            android:visibility="gone"
+            android:text="取消"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_16" />-->
+
+
+    </LinearLayout>
+
+</RelativeLayout>

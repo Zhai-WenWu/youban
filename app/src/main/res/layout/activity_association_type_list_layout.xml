@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.ToolBarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        tools:layout="@layout/fragment_tool_bar_layout" />
+
+    <View
+        android:id="@+id/line_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title_fragment"
+        android:background="@color/color_e6e6e6" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/tag_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_view_1"
+        android:background="@color/color_ffffff"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="35dp"
+        android:paddingTop="10dp" />
+
+
+    <ImageView
+        android:id="@+id/chevron_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/line_view_1"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:src="@mipmap/home_recommend_sort_close_icon"
+        tools:targetApi="lollipop" />
+
+    <View
+        android:id="@+id/line_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/tag_recycle_view"
+        android:background="@color/color_f4f4f4" />
+
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/refresh_layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line_view_2">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/finish_view"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/recycle_view"
+            android:gravity="center"
+            android:text="已全部加载"
+            android:textColor="@color/color_000000"
+            android:textSize="12sp" />
+
+        <include
+            android:id="@+id/empty_view"
+            layout="@layout/empty_page_layout"
+            android:visibility="gone" />
+
+
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+
+</RelativeLayout>

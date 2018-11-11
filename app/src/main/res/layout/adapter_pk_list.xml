@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_vedio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_vedio"
+            android:layout_width="120dp"
+            android:layout_height="135dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/video_play_icon" />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl_vedio"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:drawableLeft="@drawable/my_pk"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:text="pk挑战挑战挑战挑战挑战"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_13" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="7dp"
+            android:padding="5dp"
+            android:scaleType="fitEnd"
+            android:src="@mipmap/delete_icon" />
+    </LinearLayout>
+
+
+</RelativeLayout>

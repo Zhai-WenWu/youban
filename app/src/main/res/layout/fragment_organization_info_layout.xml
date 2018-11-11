@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_ffffff"
+    android:paddingBottom="15dp">
+
+    <ImageView
+        android:id="@+id/orgain_img"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/user_img"
+        android:layout_marginLeft="12dp"/>
+
+    <TextView
+        android:id="@+id/orgain_name_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/orgain_join_text"
+        android:layout_marginRight="5dp"
+        android:singleLine="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/orgain_img"
+        android:textColor="@color/color_333333"
+        android:text="圈子名称"
+        android:textSize="@dimen/text_size_16"
+        android:layout_alignTop="@+id/orgain_img"/>
+
+    <TextView
+        android:id="@+id/orgain_user_num_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/orgain_img"
+        android:textColor="@color/color_666666"
+        android:text="成员 0"
+        android:textSize="@dimen/text_size_12"
+        android:layout_below="@+id/orgain_name_text"/>
+
+    <TextView
+        android:id="@+id/orgain_post_num_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/orgain_user_num_text"
+        android:textColor="@color/color_666666"
+        android:text="帖子 0"
+        android:textSize="@dimen/text_size_12"
+        android:layout_below="@+id/orgain_name_text"
+        />
+
+    <TextView
+        android:id="@+id/orgain_join_text"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/color_333333"
+        android:text="加入"
+        android:textSize="@dimen/text_size_12"
+        android:layout_below="@+id/user_img"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_round_10_solid_ffee00"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

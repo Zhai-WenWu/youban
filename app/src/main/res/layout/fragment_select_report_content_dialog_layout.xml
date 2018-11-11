@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#7c000000"
+    android:gravity="bottom">
+
+    <LinearLayout
+        android:id="@+id/layout_view"
+        android:layout_above="@+id/text_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_report_bottom_bg"
+        android:layout_marginRight="18dp"
+        android:layout_marginLeft="18dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="11dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="43dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="请选择举报类型"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_a5a5a5"/>
+
+        <ListView
+            android:id="@+id/report_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/color_a5a5a5"
+            android:listSelector="@color/transparent"
+            android:dividerHeight="1dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="取消"
+        android:layout_marginRight="18dp"
+        android:layout_marginLeft="18dp"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_20"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_report_bottom_bg"/>
+
+
+</RelativeLayout>

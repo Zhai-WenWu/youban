@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_ffffff"
+    android:paddingTop="5dp"
+    android:id="@+id/root_layout">
+
+
+    <ImageView
+        android:id="@+id/goods_img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="12dp"
+        android:src="@mipmap/error_bg"/>
+
+    <ImageView
+        android:id="@+id/hot_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/goods_img"
+        android:layout_alignRight="@+id/goods_img"
+        android:src="@mipmap/goods_new_icon"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/goods_name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/goods_img"
+        android:minLines="2"
+        android:text="商品名称"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="15dp"
+        android:lineSpacingExtra="4dp"
+        />
+
+    <TextView
+        android:id="@+id/product_remain_total_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/goods_name_textview"
+        android:layout_marginTop="12dp"
+        android:text="库存：0"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_12"
+        android:layout_alignLeft="@+id/goods_name_textview"/>
+
+    <TextView
+        android:id="@+id/sale_price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_remain_total_text_view"
+        android:layout_marginTop="19dp"
+        android:text="¥"
+        android:textColor="@color/color_ffb700"
+        android:textSize="@dimen/text_size_7"
+        android:layout_alignLeft="@+id/goods_name_textview"/>
+
+    <TextView
+        android:id="@+id/sale_price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_remain_total_text_view"
+        android:layout_marginTop="12.5dp"
+        android:text="现价"
+        android:textColor="@color/color_ffb700"
+        android:textSize="@dimen/text_size_13"
+        android:layout_alignLeft="@+id/goods_name_textview"
+        android:layout_toRightOf="@+id/sale_price_text"
+        android:layout_marginLeft="6dp"/>
+
+    <TextView
+        android:id="@+id/product_price_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_remain_total_text_view"
+        android:layout_marginTop="14dp"
+        android:text="¥"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_12"
+        android:layout_toRightOf="@+id/sale_price_text_view"
+        android:layout_marginLeft="6.5dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/product_price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_remain_total_text_view"
+        android:layout_marginTop="14dp"
+        android:text="¥ 原价"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_12"
+        android:layout_toRightOf="@+id/sale_price_text_view"
+        android:layout_marginLeft="6.5dp"/>
+
+    <TextView
+        android:id="@+id/product_discount_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_remain_total_text_view"
+        android:layout_marginTop="15dp"
+        android:text="1折"
+        android:textColor="@color/color_ea3323"
+        android:textSize="@dimen/text_size_10"
+        android:layout_toRightOf="@+id/product_price_text_view"
+        android:layout_marginLeft="9.5dp"
+        android:background="@drawable/shape_round_4_stroke_ea3323"
+        android:paddingLeft="4.5dp"
+        android:paddingRight="4.5dp"
+        android:paddingTop="0.5dp"
+        android:paddingBottom="0.5dp"/>
+
+    <ImageView
+        android:id="@+id/plus_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@mipmap/goods_plus_icon"
+        android:visibility="visible"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_alignBottom="@+id/sale_price_text_view"/>
+
+    <TextView
+        android:id="@+id/num_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/plus_img"
+        android:layout_alignBottom="@+id/plus_img"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13"
+        android:layout_toLeftOf="@+id/plus_img"
+        android:layout_marginRight="7.5dp"
+        android:layout_marginLeft="7.5dp"/>
+
+    <ImageView
+        android:id="@+id/reduce_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@mipmap/goods_reduce_icon"
+        android:visibility="invisible"
+        android:layout_toLeftOf="@+id/num_text_view"
+        android:layout_marginTop="57dp"
+        android:layout_alignBottom="@+id/sale_price_text_view"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e6e6e6"
+        android:layout_below="@+id/goods_img"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/goods_name_textview"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f4f4f4"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rela_room"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_ffffff"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:drawableLeft="@drawable/find_groupvideo_video"
+            android:drawablePadding="9.5dp"
+            android:text="聊天频道"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_top_to">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_room_icon_one"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_oval_ffffff"
+                android:padding="2dp"
+                android:src="@drawable/sel"
+                android:visibility="gone" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_room_icon_two"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/shape_oval_ffffff"
+                android:padding="2dp"
+                android:src="@drawable/sel"
+                android:visibility="gone" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_room_icon_three"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/shape_oval_ffffff"
+                android:padding="2dp"
+                android:src="@drawable/sel"
+                android:visibility="gone" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_room_icon_four"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="85dp"
+                android:background="@drawable/shape_oval_ffffff"
+                android:padding="2dp"
+                android:src="@drawable/sel"
+                android:visibility="gone" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_room_icon_five"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="110dp"
+                android:background="@drawable/shape_oval_ffffff"
+                android:padding="2dp"
+                android:src="@drawable/sel"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/iv_top_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:scaleType="center"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_pk"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_ffffff"
+        android:drawableLeft="@mipmap/home_post_label_icon"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:text="官方热推"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/text_size_15"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/find_tab"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/bt_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:text="最新视频"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:id="@+id/bt_new_bottom"
+                android:layout_width="26dp"
+                android:layout_height="4dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/color_ffee00" />
+
+            <ImageView
+                android:id="@+id/iv_have_new_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/shape_dot_red"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/bt_hot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:text="最热视频"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14" />
+
+            <View
+                android:id="@+id/bt_hot_bottom"
+                android:layout_width="26dp"
+                android:layout_height="4dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/color_ffee00"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/tv_item_show"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:text="跟拍条目"
+                android:textColor="@color/color_333333"
+                android:textSize="@dimen/text_size_14" />
+
+
+            <View
+                android:id="@+id/tv_item_show_bottom"
+                android:layout_width="26dp"
+                android:layout_height="4dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/color_ffee00"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_have_new_item_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/shape_dot_red"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/empty_page_layout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="gone" />
+</LinearLayout>

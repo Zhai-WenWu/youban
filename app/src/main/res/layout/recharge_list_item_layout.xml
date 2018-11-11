@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp">
+
+
+<RelativeLayout
+    android:layout_width="110dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_round_10_stroke_666666"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+
+    <TextView
+        android:id="@+id/gold_num_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@mipmap/pay_money_icon"
+        android:text="0币"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_15"
+        android:drawablePadding="2dp"/>
+
+
+    <TextView
+        android:id="@+id/money_num_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="0元"
+        android:textColor="@color/color_ffcd00"
+        android:textSize="@dimen/text_size_15"
+        android:textStyle="bold"
+        android:layout_alignLeft="@+id/gold_num_view"
+        android:layout_alignRight="@+id/gold_num_view"
+        android:layout_below="@+id/gold_num_view"
+        android:layout_marginTop="4dp"/>
+        </RelativeLayout>
+
+
+</RelativeLayout>

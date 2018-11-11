@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="15dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="21.5dp"
+    android:paddingTop="15dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/member_user_img_view"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/member_name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/checkbox_service"
+        android:layout_toRightOf="@+id/member_user_img_view"
+        android:text="名称"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13" />
+
+    <CheckBox
+        android:id="@+id/checkbox_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/selector_group_checkbox"
+        android:checked="false" />
+</RelativeLayout>

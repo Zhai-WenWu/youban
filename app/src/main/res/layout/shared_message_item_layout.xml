@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="210.5dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="17dp">
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="分享转发"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_11" />
+
+        <TextView
+            android:id="@+id/tag_view"
+            android:layout_toRightOf="@+id/title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@drawable/shape_round_10_solid_ffee00"
+            android:text="帖子"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_10" />
+
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/title_text_view"
+            android:background="@color/color_e6e6e6" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle_image_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/line_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@color/color_333333" />
+
+        <TextView
+            android:id="@+id/nicke_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/circle_image_view"
+            android:layout_toRightOf="@+id/circle_image_view"
+            android:layout_toLeftOf="@+id/image_layout"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="昵称"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+        <RelativeLayout
+            android:id="@+id/image_layout"
+            android:layout_width="45.5dp"
+            android:layout_height="45.5dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/line_view"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/img_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/error_bg" />
+
+            <ImageView
+                android:id="@+id/video_play_img"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/video_play_icon" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/shared_tips_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/circle_image_view"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_toLeftOf="@+id/image_layout"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="分享的内容 分享的内容 分享的内容 分享的内容 分享的内容 分享的内容 分享的内容"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_12" />
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

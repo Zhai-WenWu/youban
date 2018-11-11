@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/active_top_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:drawableLeft="@mipmap/home_post_label_icon"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:singleLine="true" />
+
+
+    <TextView
+        android:id="@+id/active_top_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/active_top_layout"
+        android:background="@drawable/shape_round_20_stroke_333333"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:singleLine="true"
+        android:text="附近活动"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_11"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/more_img"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:scaleType="center"
+        android:src="@mipmap/post_detail_more_icon" />
+
+    <View
+        android:id="@+id/line_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/active_top_layout"
+        android:background="@color/color_ececec" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_img"
+        android:layout_width="35.5dp"
+        android:layout_height="35.5dp"
+        android:layout_below="@+id/line_view_1"
+        android:layout_marginLeft="11.5dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        app:border_color="@color/color_00000000"
+        app:border_width="0dp" />
+
+    <TextView
+        android:id="@+id/school_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_age_text"
+        android:layout_alignLeft="@+id/user_nickname_text"
+        android:layout_marginTop="6dp"
+        android:singleLine="true"
+        android:text="北京清华大学"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_11"/>
+
+    <TextView
+        android:id="@+id/user_nickname_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/user_img"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/user_img"
+        android:maxWidth="100dp"
+        android:singleLine="true"
+        android:text="名称"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_13" />
+
+    <ImageView
+        android:id="@+id/user_level_img"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:layout_alignBottom="@+id/user_nickname_text"
+        android:layout_alignTop="@+id/user_nickname_text"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/user_nickname_text"
+        android:src="@mipmap/level_one" />
+
+    <ImageView
+        android:id="@+id/alumnus_img"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:layout_alignBottom="@+id/user_level_img"
+        android:layout_alignTop="@+id/user_level_img"
+        android:layout_marginLeft="7dp"
+        android:layout_toRightOf="@+id/user_level_img"
+        android:src="@mipmap/alumns_icon"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/more_img"
+        android:layout_alignTop="@+id/active_status_img"
+        android:singleLine="true"
+        android:text="2017-09-22"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_11" />
+
+    <TextView
+        android:id="@+id/user_age_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/user_nickname_text"
+        android:layout_below="@+id/user_nickname_text"
+        android:layout_marginTop="7dp"
+        android:drawableLeft="@mipmap/girl_icon"
+        android:drawablePadding="5dp"
+        android:singleLine="true"
+        android:text="0 岁"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_11" />
+
+    <TextView
+        android:id="@+id/city_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_nickname_text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/user_age_text"
+        android:maxEms="7"
+        android:singleLine="true"
+        android:text="北京"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_11"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/location_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/user_age_text"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/city_text"
+        android:singleLine="true"
+        android:text="12km"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_11" />
+
+    <ImageView
+        android:id="@+id/active_img"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/user_img"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/active_status_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_view_1"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/time_text"
+        android:src="@mipmap/active_status_unenable_icon" />
+
+    <ImageView
+        android:id="@+id/post_stick_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_view_1"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/time_text"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/top_icon"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/active_name_tv"
+        android:layout_below="@+id/school_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11.5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="11.5dp"
+        android:layout_toLeftOf="@+id/active_img"
+        android:maxLines="2"
+        android:text="活动名称"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/active_img"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:text="Ta想约你一起"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_hobby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/active_img"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@id/tv_title" />
+
+
+    <TextView
+        android:id="@+id/orgain_type_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_alignLeft="@id/user_img"
+        android:layout_alignTop="@+id/recycler_orgainzation"
+        android:layout_alignBottom="@+id/recycler_orgainzation"
+        android:gravity="center"
+        android:text="活动来自"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_orgainzation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycler_hobby"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/orgain_type_tv"
+        android:layout_toLeftOf="@+id/orgainzation_more_image" />
+
+    <ImageView
+        android:id="@+id/orgainzation_more_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/recycler_orgainzation"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/recycler_orgainzation"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:src="@mipmap/orgainzation_more_icon"
+        android:visibility="visible" />
+
+
+    <View
+        android:id="@+id/line_view_2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/recycler_orgainzation"
+        android:layout_alignWithParentIfMissing="true"
+        android:background="@color/color_f4f4f4"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

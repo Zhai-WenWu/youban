@@ -1,0 +1,66 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.VideoChatFragment">
+
+    <cn.bjhdltcdn.p2plive.widget.SlideMenuDrawerLayout
+        android:id="@+id/slidemenu_drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:slide_view_min_default_margin="0dp"
+        app:slide_view_orientation="right">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/remote_video_view_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/background_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/video_hint_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="200dp"
+                android:textColor="@color/color_333333"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/local_surface_view_prarent_layout"
+                android:layout_width="144dp"
+                android:layout_height="188dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="100dp">
+
+                <FrameLayout
+                    android:id="@+id/local_surface_view_layout"
+                    android:layout_width="124dp"
+                    android:layout_height="188dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/sliding_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" />
+    </cn.bjhdltcdn.p2plive.widget.SlideMenuDrawerLayout>
+
+</FrameLayout>

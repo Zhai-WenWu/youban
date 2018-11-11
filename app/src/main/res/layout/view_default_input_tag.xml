@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.bjhdltcdn.p2plive.widget.postsearchtagview.MEditText
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:paddingBottom="4dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="4dp"
+    android:singleLine="true"
+    android:hint="自定义标签，最多输入10个字"
+    android:gravity="center_vertical"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:imeOptions="actionDone"
+    android:textColor="@color/color_333333"
+    android:textSize="13sp"/>

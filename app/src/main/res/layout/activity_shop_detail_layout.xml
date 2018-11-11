@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_ffffff"
+    android:id="@+id/root_view">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        tools:layout="@layout/fragment_title" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="49dp"
+        android:layout_below="@+id/title_fragment"
+        app:srlFooterTranslationViewId ="@+id/shop_detail_view_page"
+        >
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <cn.bjhdltcdn.p2plive.widget.CustomViewPager
+            android:id="@+id/shop_detail_view_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_ffffff"
+            app:elevation="0dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll"
+                android:id="@+id/banner_layout">
+
+                <fragment
+                    android:id="@+id/banner_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="cn.bjhdltcdn.p2plive.ui.fragment.HomeBannerFragment"/>
+
+                <include
+                    android:id="@+id/shop_screen_view"
+                    layout="@layout/shop_detail_header_layout"
+                    android:visibility="visible"
+                    android:layout_below="@+id/banner_frame"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                style="@style/shopDetailTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="exitUntilCollapsed|enterAlways|enterAlwaysCollapsed"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <ViewStub
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:id="@+id/seller_operation_layout"
+        android:layout_alignParentBottom="true"
+        android:layout="@layout/shop_detail_bottom_seller_layout" />
+
+    <ViewStub
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:id="@+id/buyer_operation_layout"
+        android:layout_alignParentBottom="true"
+        android:layout="@layout/shop_detail_bottom_buyer_layout" />
+
+    <include
+        android:id="@+id/send_comment_view"
+        layout="@layout/send_goods_comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

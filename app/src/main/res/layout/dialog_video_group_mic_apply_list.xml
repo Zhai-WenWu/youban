@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_above="@+id/listView"
+        android:background="@color/color_ffda44"
+        android:gravity="center"
+        android:text="申请列表" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="214dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:divider="@color/color_a5a5a5"
+        android:dividerHeight="0dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp" />
+</RelativeLayout>

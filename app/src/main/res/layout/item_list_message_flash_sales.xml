@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="15dp"
+    android:paddingTop="25dp">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13.5dp"
+        android:layout_toLeftOf="@+id/iv_sales"
+        android:minHeight="72dp"
+        android:text="欢迎您来友伴，在本次闪购活动中您帮好友抽取的中奖商品您也可以有机会购买，快去看看吧！"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_16" />
+
+    <ImageView
+        android:id="@+id/iv_sales"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_look"
+        android:layout_width="143dp"
+        android:layout_height="28dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_content"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/shape_round_10_solid_ffee00"
+        android:gravity="center"
+        android:text="查看我帮还有抽到的商品"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_11" />
+</RelativeLayout>

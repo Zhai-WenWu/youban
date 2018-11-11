@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/shape_round_10_solid_ffffff">
+
+        <EditText
+            android:id="@+id/edit_view"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@+id/btn_commit"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round_10_solid_f4f4f4"
+            android:hint="自建圈子标签"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_13" />
+
+        <ImageView
+            android:id="@+id/delete_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/edit_view"
+            android:layout_alignRight="@+id/edit_view"
+            android:layout_alignTop="@+id/edit_view"
+            android:padding="6dp"
+            android:src="@mipmap/edit_delect_icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="搜索"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/text_view_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_view"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_13" />
+
+        <cn.bjhdltcdn.p2plive.widget.tagview.TagContainerLayout
+            android:id="@+id/tag_container_view_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
+            app:container_background_color="@color/color_00000000"
+            app:container_border_color="@color/transparent"
+            app:container_enable_drag="false"
+            app:horizontal_interval="10dp"
+            app:tag_background_color="@color/color_fafafa"
+            app:tag_border_color="@color/color_333333"
+            app:tag_border_width="1dp"
+            app:tag_clickable="true"
+            app:tag_corner_radius="5dp"
+            app:tag_enable_cross="false"
+            app:tag_horizontal_padding="13dp"
+            app:tag_text_color="@color/color_333333"
+            app:tag_text_size="@dimen/text_size_13"
+            app:tag_theme="none"
+            app:tag_vertical_padding="8dp"
+            app:vertical_interval="10dp" />
+
+
+        <TextView
+            android:id="@+id/text_view_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@+id/tag_container_view_1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="22dp"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_13" />
+
+        <cn.bjhdltcdn.p2plive.widget.tagview.TagContainerLayout
+            android:id="@+id/tag_container_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@+id/text_view_2"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
+            app:container_background_color="@color/color_00000000"
+            app:container_border_color="@color/transparent"
+            app:container_enable_drag="false"
+            app:horizontal_interval="10dp"
+            app:tag_background_color="@color/color_fafafa"
+            app:tag_border_color="@color/color_333333"
+            app:tag_border_width="1dp"
+            app:tag_clickable="true"
+            app:tag_corner_radius="5dp"
+            app:tag_enable_cross="false"
+            app:tag_horizontal_padding="13dp"
+            app:tag_text_color="@color/color_333333"
+            app:tag_text_size="@dimen/text_size_13"
+            app:tag_theme="none"
+            app:tag_vertical_padding="8dp"
+            app:vertical_interval="10dp" />
+
+        <TextView
+            android:id="@+id/text_view_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@+id/tag_container_view"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_13" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@+id/text_view_4"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="14.5dp"
+            android:layout_marginRight="14.5dp"
+            android:layout_marginTop="23dp"
+            android:background="@color/color_f4f4f4" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

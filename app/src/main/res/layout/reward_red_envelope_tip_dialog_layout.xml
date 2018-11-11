@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7c000000"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/color_f0ffffff"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_tip_content"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            >
+
+            <ImageView
+                android:id="@+id/reward_tip_close_view"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="17dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/guanbi" />
+
+            <ImageView
+                android:id="@+id/reward_image_view"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:layout_below="@+id/reward_tip_close_view"/>
+
+            <TextView
+                android:id="@+id/reward_name_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reward_image_view"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="标题"
+                android:textColor="@color/color_444444"
+                android:textSize="@dimen/text_size_16"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:id="@+id/reward_jine_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reward_name_view"
+                android:lineSpacingExtra="3dp"
+                android:text="金额："
+                android:textColor="@color/color_444444"
+                android:textSize="@dimen/text_size_16"
+                android:paddingLeft="50dp"
+                android:numeric="integer"/>
+
+            <EditText
+                android:id="@+id/money_edit_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/reward_jine_view"
+                android:layout_toLeftOf="@+id/reward_jinbi_view"
+                android:layout_toRightOf="@+id/reward_jine_view"
+                android:background="#00000000"
+                android:gravity="left"
+                android:hint="填写金额"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_999999"
+                android:textSize="@dimen/text_size_14"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:maxLength="8"/>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/money_edit_view"
+                android:background="@color/black"
+                android:layout_alignLeft="@+id/money_edit_view"
+                android:layout_alignRight="@+id/money_edit_view"/>
+
+            <TextView
+                android:id="@+id/reward_jinbi_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/reward_name_view"
+                android:lineSpacingExtra="3dp"
+                android:text="金币"
+                android:textColor="@color/color_444444"
+                android:textSize="@dimen/text_size_16"
+                android:paddingRight="50dp"/>
+
+
+            <Button
+                android:id="@+id/send_money_view"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/reward_jine_view"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="40dp"
+                android:background="@drawable/shape_round_10_solid_ffee00"
+                android:text="送红包"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15"
+                />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

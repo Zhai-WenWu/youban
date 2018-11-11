@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/line_four"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e6e6e6"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/multimedia_icon_group_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/line_four"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Switch
+            android:id="@+id/anonymous_view"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:textOff="匿名"
+            android:textOn="匿名"
+            android:thumb="@drawable/anonymous_view_humb"
+            android:track="@drawable/anonymous_view_switch_setting_selector"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/left_img_view"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/middle_img_view"
+            android:src="@mipmap/select_photo_icon" />
+
+        <ImageView
+            android:id="@+id/middle_img_view"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/select_video_icon" />
+
+
+        <ImageView
+            android:id="@+id/right_img_view"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@+id/middle_img_view"
+            android:src="@mipmap/select_gif_icon" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/multimedia_icon_group_layout"
+        android:background="@color/color_e6e6e6" />
+
+</RelativeLayout>

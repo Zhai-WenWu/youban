@@ -1,0 +1,186 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.bugtags.library.plugin'
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "cn.bjhdltcdn.p2plive"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 40
+        versionName "3.0"
+//        versionName "2.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java']
+            jniLibs.srcDirs = ['libs']
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+    signingConfigs {
+        debug {
+            // No debug config
+            storeFile file("D:/work/keystore/p2plive.jks")
+//            storeFile file("/Users/xiawenquan/Documents/android-workspace/jks/p2plive.jks")
+//            storeFile file("D:/tools/p2plive.jks")
+            storeFile file("E:/p2plive.jks")
+//            storeFile file("/Users/zhudi/Documents/tools/p2plive.jks")
+            storePassword "123456"
+            keyAlias "p2plive"
+            keyPassword "123456"
+
+            v1SigningEnabled true
+            v2SigningEnabled false
+
+        }
+
+        release {
+            storeFile file("D:/work/keystore/p2plive.jks")
+//            storeFile file("/Users/xiawenquan/Documents/android-workspace/jks/p2plive.jks")
+//            storeFile file("D:/tools/p2plive.jks")
+            storeFile file("E:/p2plive.jks")
+//            storeFile file("/Users/zhudi/Documents/tools/p2plive.jks")
+            storePassword "123456"
+            keyAlias "p2plive"
+            keyPassword "123456"
+
+            v1SigningEnabled true
+            v2SigningEnabled false
+        }
+    }
+    buildTypes {
+
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            signingConfig signingConfigs.release
+            ndk {
+                abiFilters "armeabi", "armeabi-v7a", "x86"
+            }
+
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ndk {
+                abiFilters "armeabi", "armeabi-v7a", "x86"
+            }
+
+        }
+
+    }
+    dexOptions {
+        javaMaxHeapSize "6g"
+        preDexLibraries = false
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/rxjava.properties'
+        exclude 'AndroidManifest.xml'
+    }
+    //lint检查
+    lintOptions {
+        abortOnError false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+
+
+}
+
+greendao {
+    schemaVersion 4
+    daoPackage 'cn.bjhdltcdn.p2plive.greendao'
+    targetGenDir 'src/main/java'
+}
+
+//Bugtags 插件配置
+bugtags {
+    //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考帮助中心->符号表->Android 符号表->配置自动上传符号表
+    appKey "21b58c6d650695e7b05990324ea5593b"  //这里是你的 appKey
+    appSecret "941fca4af681faf5bd297311326a40ac"    //这里是你的 appSecret，管理员在设置页可以查看
+    mappingUploadEnabled true
+
+    //网络跟踪功能配置(企业版)
+    trackingNetworkEnabled true
+}
+dependencies {
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:support-v4:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // 华为包
+    implementation(name: 'HMS-SDK-2.4.0.300', ext: 'aar')
+    // 日志包
+    implementation 'com.orhanobut:logger:2.1.1'
+    // 下载刷新和上拉加载
+    implementation 'com.lcodecorex:tkrefreshlayout:1.0.7'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    // 分包库
+    implementation 'com.android.support:multidex:1.0.3'
+    // 网络包
+    implementation 'com.lzy.net:okgo:3.0.4'
+    // 原型控件
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.android.support:design:27.1.1'
+    // 事件总线包
+    implementation 'org.greenrobot:eventbus:3.1.0-RC'
+
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    // 选择图片
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    implementation project(':baidu-sdk-library')
+    // materialdialog 风格对话框
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation project(':IMKit')
+    implementation project(':pickerview')
+    // 通讯录
+    implementation 'com.github.mcxtzhang:SuspensionIndexBar:V1.0.0'
+    //又拍云
+    implementation 'com.upyun:upyun-android-sdk:2.0.4'
+    //微信
+//    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.1.4'
+    //滑动删除
+    implementation 'com.tubb.smrv:swipemenu-recyclerview:5.4.0'
+    // greendao数据库3
+    implementation 'org.greenrobot:greendao:3.2.2'
+    //完整版引入
+    implementation 'com.shuyu:gsyVideoPlayer-java:4.1.3'
+    implementation 'com.shuyu:gsyVideoPlayer-ex_so:4.1.3'
+    // 友盟分析日志
+    implementation 'com.umeng.analytics:analytics:6.1.4'
+    // 阿里云热修复服务组件
+    implementation(name: 'sophix-3.1.9.1', ext: 'aar')
+    implementation 'jp.wasabeef:glide-transformations:3.2.0'
+    //bugtags
+    implementation 'com.bugtags.library:bugtags-lib:latest.integration'
+
+    // leakcanary检测内存工具
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-5'
+    implementation 'com.beloo.widget:ChipsLayoutManager:0.3.7@aar'
+
+    implementation 'com.makeramen:roundedimageview:2.2.1'
+}
+
+
+repositories { flatDir { dirs 'aars' } }
+
+
+
+
+
+

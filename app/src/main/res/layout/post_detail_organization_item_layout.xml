@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingRight="12dp"
+    android:paddingBottom="10dp">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_round_20_stroke_666666"
+    android:paddingBottom="3dp"
+    android:paddingLeft="7.5dp"
+    android:paddingRight="7.5dp"
+    android:paddingTop="3dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/post_label_two_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/post_label_two_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="二级标签"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_10" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+</RelativeLayout>

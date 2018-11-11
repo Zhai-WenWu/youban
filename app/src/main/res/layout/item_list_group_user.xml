@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_icon"
+        android:layout_width="45.5dp"
+        android:layout_height="45.5dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/tv_name_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_toRightOf="@id/img_icon"
+        android:text="名称"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/tv_num_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name_group"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/img_icon"
+        android:text="人数"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_11" />
+
+    <TextView
+        android:id="@+id/tv_join"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_round_10_solid_ffee00"
+        android:gravity="center"
+        android:text="加入"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_12"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_chat"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_round_10_stroke_333333"
+        android:gravity="center"
+        android:text="发起群聊"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_12"
+        android:visibility="gone" />
+</RelativeLayout>
+

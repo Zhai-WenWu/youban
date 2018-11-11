@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="44dp"
+    android:background="@color/color_ffffff">
+
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:text="推荐"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_13"
+        android:textColor="@color/color_999999"/>
+
+    <ImageView
+        android:id="@+id/tab_home_pop_view"
+        android:layout_width="9dp"
+        android:layout_height="9dp"
+        android:layout_marginLeft="-5dp"
+        android:layout_toRightOf="@+id/text_view"
+        android:background="@drawable/shape_red_pop_num"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+</RelativeLayout>

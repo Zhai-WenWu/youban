@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_image_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:src="@color/color_e6e6e6" />
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circle_image_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxEms="3"
+        android:maxLines="1"
+        android:text="昵称"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_11" />
+
+    <TextView
+        android:id="@+id/nicke_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/circle_image_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:background="@color/color_80333333"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:text="管理员"
+        android:textColor="@color/color_ffffff"
+        android:textSize="@dimen/text_size_9" />
+
+
+</RelativeLayout>

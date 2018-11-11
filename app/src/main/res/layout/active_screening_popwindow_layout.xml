@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_33333333">
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_fafafa"
+        android:paddingTop="15dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp">
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="排序"
+            android:textColor="@color/color_333333"
+            android:id="@+id/tv_sort"
+            android:textSize="@dimen/text_size_14"/>
+
+        <RadioGroup android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_sort"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_sort"
+            android:orientation="horizontal">
+
+            <RadioButton android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="按发布者距离"
+                android:textColor="@drawable/selector_textcolor_condition_radio"
+                android:id="@+id/radio_sort_duration_user"
+                android:layout_toRightOf="@+id/radio_show_list"
+                android:background="@drawable/selector_textbg_condition_radio"
+                android:gravity="center"
+                android:button="@null"
+                android:checked="true"/>
+
+            <RadioButton android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="按发布时间"
+                android:layout_marginLeft="15dp"
+                android:textColor="@drawable/selector_textcolor_condition_radio"
+                android:id="@+id/radio_sort_time"
+                android:background="@drawable/selector_textbg_condition_radio"
+                android:gravity="center"
+                android:button="@null"
+                android:checked="false"/>
+
+            <RadioButton android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="按活动距离"
+                android:textColor="@drawable/selector_textcolor_condition_radio"
+                android:id="@+id/radio_sort_duration_active"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/radio_show_list"
+                android:background="@drawable/selector_textbg_condition_radio"
+                android:gravity="center"
+                android:button="@null"
+                android:checked="false"/>
+
+
+        </RadioGroup>
+
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="活动发布者"
+            android:textColor="@color/color_333333"
+            android:id="@+id/tv_location"
+            android:textSize="@dimen/text_size_14"
+            android:layout_below="@+id/radio_sort"
+            android:layout_marginTop="20dp"/>
+
+        <RadioGroup android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_location"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_location"
+            android:orientation="horizontal">
+
+            <RadioButton android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:text="不限"
+                android:textColor="@drawable/selector_textcolor_condition_radio"
+                android:id="@+id/radio_location_all"
+                android:background="@drawable/selector_textbg_condition_radio"
+                android:gravity="center"
+                android:button="@null"
+                android:checked="true"/>
+
+            <RadioButton android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:text="校友发布"
+                android:textColor="@drawable/selector_textcolor_condition_radio"
+                android:id="@+id/radio_location_same"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/tv_location_all"
+                android:background="@drawable/selector_textbg_condition_radio"
+                android:gravity="center"
+                android:button="@null"
+                android:checked="false"/>
+        </RadioGroup>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别限制"
+            android:textColor="@color/color_333333"
+            android:id="@+id/tv_sex"
+            android:textSize="@dimen/text_size_14"
+            android:layout_below="@+id/radio_location"
+            android:layout_marginTop="20dp"
+            android:visibility="visible"/>
+
+        <RadioGroup android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_sex"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_sex"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <RadioButton android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="全部"
+                android:textColor="@drawable/selector_textcolor_condition_radio"
+                android:id="@+id/radio_all_sex"
+                android:background="@drawable/selector_textbg_condition_radio"
+                android:gravity="center"
+                android:button="@null"
+                android:checked="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+
+            <RadioButton android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="不限性别"
+                android:textColor="@drawable/selector_textcolor_condition_radio"
+                android:id="@+id/radio_sex_boy_girl"
+                android:background="@drawable/selector_textbg_condition_radio"
+                android:gravity="center"
+                android:button="@null"
+                android:checked="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <RadioButton android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="仅限男生"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@drawable/selector_textcolor_condition_radio"
+                android:id="@+id/radio_boy"
+                android:background="@drawable/selector_textbg_condition_radio"
+                android:gravity="center"
+                android:button="@null"
+                android:checked="false"/>
+
+            <RadioButton android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="仅限女生"
+                android:textColor="@drawable/selector_textcolor_condition_radio"
+                android:id="@+id/radio_girl"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/radio_girl"
+                android:background="@drawable/selector_textbg_condition_radio"
+                android:gravity="center"
+                android:button="@null"
+                android:checked="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+
+        </RadioGroup>
+
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="活动类别"
+            android:textColor="@color/color_333333"
+            android:layout_marginTop="20dp"
+            android:textSize="@dimen/text_size_14"
+            android:id="@+id/tv_category"
+            android:layout_below="@+id/radio_sex"/>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/category_recycler_view"
+            android:layout_below="@+id/tv_category"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"/>
+
+
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:id="@+id/bottom_layout"
+           android:layout_below="@+id/category_recycler_view">
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:text="取消"
+            android:textColor="@color/color_000000"
+            android:id="@+id/tv_cancel"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/shape_round_10_stroke_999999_solid_ffffff"/>
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:text="确定"
+            android:textColor="@color/color_000000"
+            android:id="@+id/tv_ok"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/shape_round_10_solid_ffee00"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

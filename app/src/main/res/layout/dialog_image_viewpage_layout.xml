@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:hardwareAccelerated="true">
+
+    <TextView
+        android:id="@+id/tile_text_view"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:textColor="@color/color_ffb921"/>
+
+    <cn.bjhdltcdn.p2plive.widget.CustomViewPager
+        android:id="@+id/view_page"
+        android:layout_below="@+id/tile_text_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"/>
+
+</RelativeLayout>

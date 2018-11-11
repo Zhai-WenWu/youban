@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f4f4f4"
+    android:focusableInTouchMode="true">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_e6e6e6" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:paddingBottom="7dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="8dp">
+
+        <EditText
+            android:id="@+id/reply_edit_input"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="45dp"
+            android:maxHeight="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/send_view"
+            android:background="@drawable/shape_bottom_send_edit_bg"
+            android:gravity="center_vertical"
+            android:hint="说点什么吧...."
+            android:padding="5dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_999999"
+            android:maxLength="100"/>
+
+        <Button
+            android:id="@+id/send_view"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_bottom_send_bg"
+            android:enabled="false"
+            android:text="发送"
+            android:textColor="@drawable/shape_bottom_send_text_bg"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

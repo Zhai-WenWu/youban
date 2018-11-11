@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_view_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_round_40_stroke_ffda44">
+
+            <TextView
+                android:id="@+id/text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxWidth="200dp"
+                android:minWidth="100dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="50dp"
+                android:singleLine="true"
+                android:textColor="@color/color_ffda44"
+                android:textSize="@dimen/text_size_12" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignRight="@+id/layout_view_2"
+            android:layout_marginRight="-10dp" />
+
+        <TextView
+            android:id="@+id/x_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/image_view"
+            android:gravity="center"
+            android:text="X"
+            android:textColor="@color/color_ffda44"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/group_video_gift_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/x_view"
+            android:padding="2dp"
+            android:text="1"
+            android:textColor="@color/color_ffda44"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_f4f4f4"
+   >
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="cn.bjhdltcdn.p2plive.ui.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        tools:layout="@layout/fragment_title" />
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:id="@+id/tab_layout"
+        android:layout_below="@+id/title_fragment"
+        android:layout_marginTop="5dp"
+        android:background="@color/color_ffffff">
+
+        <TextView
+            android:id="@+id/nearby_orgain_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="附近的圈子"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14"
+             android:layout_weight="1"
+            android:background="@color/color_ffee00"/>
+
+        <TextView
+            android:id="@+id/nearby_person_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="附近的人"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_14"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+<com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh_layout_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tab_layout"
+    >
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:layout_below="@+id/order_text_view"
+        />
+
+    <TextView
+        android:id="@+id/finish_view"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/recycler_view"
+        android:gravity="center"
+        android:text="已全部加载"
+        android:textColor="@color/color_000000"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/empty_page_layout"
+        android:visibility="visible" />
+
+</com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+</RelativeLayout>

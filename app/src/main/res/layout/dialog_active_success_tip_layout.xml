@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_33333333"
+    android:paddingLeft="28dp"
+    android:paddingRight="28dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_round_10_solid_ffffff"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="活动发布成功"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_17"
+            android:textStyle="bold"/>
+
+
+
+        <TextView
+            android:id="@+id/tip_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="提示内容"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/text_size_16"
+            />
+
+        <TextView
+            android:id="@+id/inviation_tip_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="您还可以随机或指定给附近的人及好友发送一封邀请函，邀请他来参加您的活动~"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/text_size_16"
+
+            />
+
+
+        <TextView
+            android:id="@+id/text_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:gravity="center"
+            android:text="发送邀请函"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_15"
+            android:background="@drawable/shape_round_10_solid_ffee00"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/active_launch_tip_close_icon"
+        android:layout_alignTop="@+id/layout_view"
+        android:layout_alignRight="@+id/layout_view"
+        android:padding="10dp"
+        android:id="@+id/close_img"/>
+
+</RelativeLayout>

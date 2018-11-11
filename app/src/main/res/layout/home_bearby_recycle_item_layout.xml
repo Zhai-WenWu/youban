@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f4f4f4">
+
+    <View android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:id="@+id/top_view"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/nearby_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/error_bg"
+        android:layout_below="@+id/top_view"/>
+    <TextView
+        android:id="@+id/nearby_new_num_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:singleLine="true"
+        android:text="0条更新"
+        android:textColor="@color/color_ffffff"
+        android:layout_alignTop="@+id/nearby_image"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingRight="8dp"
+        android:textSize="@dimen/text_size_10"
+        android:drawableLeft="@drawable/shape_yellow_pop_num"
+        android:drawablePadding="3dp"
+        android:visibility="gone"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:background="@drawable/shape_round_11_stroke_ffee00_solid_6613140d"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_below="@+id/nearby_image"
+        android:background="@color/color_ffffff"
+        android:id="@+id/tv_layout">
+
+    <TextView
+        android:id="@+id/nearby_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:singleLine="true"
+        android:text="名称"
+        android:textColor="@color/color_333333"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_16"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/nearby_content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="解说"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_11"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/nearby_name_text"
+        android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:id="@+id/bottom_view"
+        android:background="@color/color_f4f4f4"
+        android:layout_below="@+id/tv_layout"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>

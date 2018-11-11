@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="15dp">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addrs_layout"
+        android:background="@drawable/shape_round_18_solid_fafafa"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/addrs_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="具体地址"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+
+        <TextView
+            android:id="@+id/name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addrs_text_view"
+            android:layout_marginTop="2dp"
+            android:text="名称"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/phonenum_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addrs_text_view"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/name_text_view"
+            android:layout_marginLeft="15dp"
+            android:text="000000000000"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_14" />
+
+
+    </RelativeLayout>
+
+    <CheckBox android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="默认地址"
+        android:layout_below="@+id/addrs_layout"
+        android:button="@null"
+        android:checked="false"
+        android:drawableLeft="@drawable/apply_for_shop_rules_radiobutton"
+        android:drawablePadding="8dp"
+        android:id="@+id/rules_checkbox"
+        android:textSize="@dimen/text_size_11"
+        android:textColor="@color/color_333333"
+        android:paddingTop="10dp"
+        android:paddingBottom="7dp"/>
+
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/addrs_layout"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:src="@mipmap/addrs_edit_icon"
+        android:id="@+id/edit_img"/>
+</RelativeLayout>

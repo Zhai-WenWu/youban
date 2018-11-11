@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_video"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.VideoChatFragment">
+
+    <include
+        android:id="@+id/attention_view_layout"
+        layout="@layout/fragment_attention_view_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_above="@+id/item_layout_view"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="150dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/item_layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/message_view"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/rl_msg"
+            android:background="@drawable/video_message" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="37dp"
+            android:layout_toLeftOf="@+id/finish_view">
+
+            <ImageView
+                android:id="@+id/btn_msg_private"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/video_message_private" />
+
+            <TextView
+                android:id="@+id/img_msg_private_pop_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/btn_msg_private"
+                android:layout_marginLeft="-10dp"
+                android:layout_toRightOf="@+id/btn_msg_private"
+                android:background="@drawable/shape_red_pop_num"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_10"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/finish_view"
+            android:layout_width="50.5dp"
+            android:layout_height="50.5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/video_hangup" />
+
+        <Button
+            android:id="@+id/btn_more"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="37dp"
+            android:background="@drawable/video_group_manage" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/send_layout_view"
+        layout="@layout/home_list_bottom_send_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+</RelativeLayout>

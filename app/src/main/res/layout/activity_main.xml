@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.bjhdltcdn.p2plive.widget.CustomViewPager
+        android:id="@+id/main_view_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabs_layout"
+        android:layout_marginBottom="0.5dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/tabs_layout"
+        android:background="@color/color_d3d3d3" />
+
+    <TextView
+        android:id="@+id/tv_chatroom"
+        android:layout_width="225dp"
+        android:layout_height="60.5dp"
+        android:layout_above="@+id/iv_public"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="31dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_round_18_solid_66333333"
+        android:drawablePadding="8dp"
+        android:drawableRight="@drawable/quit_chatroom"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="57dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_14"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_icon_chatroom"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/tv_chatroom"
+        android:layout_alignTop="@+id/tv_chatroom"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_close_chatroom"
+        android:layout_width="30dp"
+        android:layout_height="60.5dp"
+        android:layout_alignRight="@+id/tv_chatroom"
+        android:layout_alignTop="@+id/tv_chatroom"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_public"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@mipmap/post_publish_icon"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/tabs_layout"
+        android:layout_marginBottom="79.5dp"
+        android:visibility="gone"
+        android:layout_marginRight="28dp"/>
+
+    <LinearLayout
+        android:id="@+id/tabs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_ffffff"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/tab_1_layout_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/tab_1_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/main_home_nor_icon" />
+
+            <TextView
+                android:id="@+id/tab_1_name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tab_1_image_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text="首页"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_10" />
+
+
+            <ImageView
+                android:id="@+id/tab_1_name_pop_view"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:layout_marginLeft="-5dp"
+                android:layout_toRightOf="@+id/tab_1_image_view"
+                android:gravity="center"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/tab_2_layout_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/tab_2_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/store_icon" />
+
+            <TextView
+                android:id="@+id/tab_2_name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tab_2_image_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text="店铺"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_10" />
+
+            <TextView
+                android:id="@+id/tab_2_name_pop_view"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:layout_marginLeft="-5dp"
+                android:layout_toRightOf="@+id/tab_2_image_view"
+                android:gravity="center"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tab_4_layout_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/tab_4_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/main_message_nor_icon" />
+
+            <TextView
+                android:id="@+id/tab_4_name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tab_4_image_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text="消息"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_10" />
+
+            <TextView
+                android:id="@+id/tab_4_pop_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginTop="-3dp"
+                android:layout_toRightOf="@+id/tab_4_image_view"
+                android:background="@drawable/shape_red_pop_num"
+                android:gravity="center"
+                android:text="20"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_10"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/tab_5_layout_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/tab_5_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/main_my_nor_icon" />
+
+
+            <TextView
+                android:id="@+id/tab_5_name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tab_5_image_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text="我"
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/text_size_10" />
+
+            <TextView
+                android:id="@+id/tab_5_pop_view"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:layout_marginLeft="-5dp"
+                android:layout_toRightOf="@+id/tab_5_image_view"
+                android:gravity="center"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:text="品牌商详情"/>
+
+</RelativeLayout>

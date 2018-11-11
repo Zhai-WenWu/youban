@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_33333333"
+    android:paddingLeft="28dp"
+    android:paddingRight="28dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/shape_round_10_solid_ffffff"
+        android:layout_centerInParent="true"
+        >
+
+        <ImageView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/active_launch_tip_close_icon"
+            android:padding="10dp"
+            android:id="@+id/close_img"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/tip_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:text="输入提现金额：¥"
+            android:textSize="@dimen/text_size_14"
+            android:layout_below="@+id/tip_four"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="27dp"/>
+
+        <EditText android:layout_width="match_parent"
+            android:background="@color/color_00000000"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tip_five"
+            android:id="@+id/charge_edit"
+            android:layout_alignBottom="@+id/tip_five"
+            android:text=""
+            android:textSize="@dimen/text_size_13"
+            android:textColor="@color/color_333333"
+            android:gravity="left"
+            android:inputType="numberDecimal"
+            android:singleLine="true"
+            android:textColorHint="@color/color_999999"
+            android:paddingLeft="5dp"
+            android:layout_marginRight="27dp"/>
+
+
+
+        <View android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_999999"
+            android:layout_toRightOf="@+id/tip_five"
+            android:layout_below="@+id/tip_five"
+            android:layout_marginTop="5.5dp"
+            android:layout_alignLeft="@+id/charge_edit"
+            android:layout_marginLeft="-20dp"
+            android:id="@+id/tip_sex"
+            android:layout_marginRight="27dp"/>
+
+
+
+        <TextView
+            android:id="@+id/text_payoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:gravity="center"
+            android:text="确认付款"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_15"
+            android:background="@drawable/shape_round_10_solid_ffee00"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/tip_sex"
+            android:layout_marginTop="41dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

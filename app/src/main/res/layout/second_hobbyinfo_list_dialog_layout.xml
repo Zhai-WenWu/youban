@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:background="@color/color_ffffff"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <cn.bjhdltcdn.p2plive.widget.tagview.TagContainerLayout
+            android:id="@+id/tag_container_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_2"
+            android:layout_marginTop="18dp"
+            app:container_background_color="@color/color_00000000"
+            app:container_border_color="@color/transparent"
+            app:container_enable_drag="false"
+            app:horizontal_interval="16dp"
+            app:tag_background_color="@color/color_f2f2f2"
+            app:tag_border_color="@color/color_999999"
+            app:tag_border_width="1dp"
+            app:tag_clickable="true"
+            app:tag_corner_radius="5dp"
+            app:tag_enable_cross="false"
+            app:tag_horizontal_padding="13dp"
+            app:tag_text_color="@color/color_999999"
+            app:tag_text_size="@dimen/text_size_13"
+            app:tag_theme="none"
+            app:tag_vertical_padding="8dp"
+            app:vertical_interval="20dp" />
+
+        <ImageView
+            android:id="@+id/chevron_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tag_container_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:src="@mipmap/home_recommend_sort_close_icon"
+            tools:targetApi="lollipop" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <View android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_f4f4f4"
+        android:visibility="gone"
+        android:id="@+id/divider_line"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="50dp"
+        android:paddingTop="19dp"
+        android:paddingBottom="19dp"
+        android:background="@color/white"
+        android:layout_below="@+id/divider_line"
+        android:id="@+id/user_layout">
+
+    <CheckBox
+        android:id="@+id/checkbox_service"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_centerVertical="true"
+        android:button="@drawable/say_love_publish_check_bg"
+        android:checked="false"
+        android:enabled="true"/>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/member_user_img_view"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginLeft="13dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/error_user_icon"
+        android:layout_toRightOf="@+id/checkbox_service"/>
+
+
+    <TextView
+        android:id="@+id/member_name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/member_user_img_view"
+        android:text="名称"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13"
+        />
+
+    </RelativeLayout>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_e6e6e6"
+        android:visibility="visible"
+        android:id="@+id/divider_bottom"
+        android:layout_below="@+id/user_layout"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tubb.smrv.SwipeHorizontalMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="57dp"
+    android:background="@color/white"
+    android:clickable="true"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:id="@+id/smContentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/nm_item_icon" />
+
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="匿名用户"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/smMenuViewRight"
+        android:layout_width="100dp"
+        android:layout_height="57dp"
+        android:background="@color/color_fb0303"
+        android:gravity="center"
+        android:text="删除好友"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_15" />
+
+</com.tubb.smrv.SwipeHorizontalMenuLayout>
+
+

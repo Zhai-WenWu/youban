@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/line_goldnum"
+        android:background="@color/color_b0000000">
+
+        <TextView
+            android:id="@+id/my_dian_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="剩余0金币"
+            android:textColor="@color/color_ffb921"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/line_goldnum"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/props_view_page"
+        android:background="@color/color_7fe1e1e1" />
+
+
+    <cn.bjhdltcdn.p2plive.widget.CustomViewPager
+        android:id="@+id/props_view_page"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_above="@+id/tabs_layout"
+        android:background="#b0000000" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/tabs_layout"
+        android:background="@color/color_7fe1e1e1" />
+
+
+    <LinearLayout
+        android:id="@+id/tabs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#b0000000">
+
+        <TextView
+            android:id="@+id/tab_recharge_name_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="充值"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_7fe1e1e1" />
+
+
+        <TextView
+            android:id="@+id/tab_props_name_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="礼物"
+            android:textColor="@color/color_ffb921"
+            android:textSize="@dimen/text_size_16" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

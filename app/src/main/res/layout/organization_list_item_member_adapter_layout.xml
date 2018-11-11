@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ffffff">
+
+
+    <TextView
+        android:id="@+id/top_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:gravity="center|left"
+        android:paddingLeft="10dp"
+        android:text="圈主"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_14" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_image_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/top_text_view"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@color/color_000000" />
+
+    <TextView
+        android:id="@+id/nicke_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/circle_image_view"
+        android:layout_toRightOf="@+id/circle_image_view"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_13" />
+
+    <ImageView
+        android:id="@+id/active_level_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/nicke_text_view"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/nicke_text_view"
+        android:layout_alignWithParentIfMissing="true"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp" />
+
+    <ImageView
+        android:id="@+id/alumnus_text"
+        android:layout_width="30dp"
+        android:layout_height="15dp"
+        android:layout_alignBottom="@+id/active_level_view"
+        android:layout_alignTop="@+id/active_level_view"
+        android:layout_marginLeft="7dp"
+        android:layout_toRightOf="@+id/active_level_view"
+        android:layout_alignWithParentIfMissing="true"
+        android:src="@mipmap/alumns_icon"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/user_age_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nicke_text_view"
+        android:layout_below="@+id/nicke_text_view"
+        android:layout_marginTop="7dp"
+        android:drawableLeft="@mipmap/girl_icon"
+        android:drawablePadding="5dp"
+        android:singleLine="true"
+        android:text="0岁"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_11" />
+
+    <TextView
+        android:id="@+id/location_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/user_age_text"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/user_age_text"
+        android:singleLine="true"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_11" />
+
+    <TextView
+        android:id="@+id/distance_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/top_text_view"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:text="0km"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/text_size_12" />
+
+    <TextView
+        android:id="@+id/out_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/gag_view"
+        android:layout_below="@+id/distance_text_view"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignWithParentIfMissing="true"
+        android:background="@drawable/shape_round_10_stroke_666666_solid_ffffff"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="3dp"
+        android:singleLine="true"
+        android:text="踢出"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/text_size_12" />
+
+
+    <TextView
+        android:id="@+id/gag_view"
+        android:layout_toLeftOf="@+id/delete_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distance_text_view"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_round_10_stroke_ff8d8d_solid_ffffff"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="3dp"
+        android:singleLine="true"
+        android:text="禁言"
+        android:textColor="@color/color_ff8d8d"
+        android:textSize="@dimen/text_size_12" />
+
+
+    <TextView
+        android:id="@+id/delete_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/distance_text_view"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_round_10_stroke_666666_solid_ffffff"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="3dp"
+        android:singleLine="true"
+        android:text="删除"
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/text_size_12" />
+
+    <View
+        android:id="@+id/line_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@+id/circle_image_view" />
+
+
+</RelativeLayout>

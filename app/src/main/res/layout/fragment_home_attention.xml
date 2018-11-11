@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh_layout_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_f4f4f4">
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+       />
+
+    <TextView
+        android:id="@+id/finish_view"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/recycler_view"
+        android:gravity="center"
+        android:text="已全部加载"
+        android:textColor="@color/color_000000"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/empty_page_layout"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/tab_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dip"
+        android:layout_marginTop="11dp"
+        android:src="@mipmap/scrool_to_top_icon"
+        />
+
+</com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
